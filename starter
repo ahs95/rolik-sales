@@ -1,1 +1,1083 @@
-{"metadata":{"kernelspec":{"language":"python","display_name":"Python 3","name":"python3"},"language_info":{"name":"python","version":"3.10.14","mimetype":"text/x-python","codemirror_mode":{"name":"ipython","version":3},"pygments_lexer":"ipython3","nbconvert_exporter":"python","file_extension":".py"},"kaggle":{"accelerator":"none","dataSources":[{"sourceId":88742,"databundleVersionId":10173359,"sourceType":"competition"}],"dockerImageVersionId":30804,"isInternetEnabled":true,"language":"python","sourceType":"notebook","isGpuEnabled":false}},"nbformat_minor":4,"nbformat":4,"cells":[{"cell_type":"code","source":"# This Python 3 environment comes with many helpful analytics libraries installed\n# It is defined by the kaggle/python Docker image: https://github.com/kaggle/docker-python\n# For example, here's several helpful packages to load\n\nimport numpy as np # linear algebra\nimport pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)\n\n# Input data files are available in the read-only \"../input/\" directory\n# For example, running this (by clicking run or pressing Shift+Enter) will list all files under the input directory\n\nimport os\nfor dirname, _, filenames in os.walk('/kaggle/input'):\n    for filename in filenames:\n        print(os.path.join(dirname, filename))\n\n# You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using \"Save & Run All\" \n# You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session","metadata":{"_uuid":"0bd383a6-67d0-4ff1-b62f-d8615d7633c5","_cell_guid":"942731e3-16b9-4b63-849a-0d191f729a66","trusted":true,"collapsed":false,"execution":{"iopub.status.busy":"2025-02-09T20:14:07.818654Z","iopub.execute_input":"2025-02-09T20:14:07.819111Z","iopub.status.idle":"2025-02-09T20:14:08.232451Z","shell.execute_reply.started":"2025-02-09T20:14:07.819072Z","shell.execute_reply":"2025-02-09T20:14:08.231274Z"},"jupyter":{"outputs_hidden":false}},"outputs":[{"name":"stdout","text":"/kaggle/input/rohlik-sales-forecasting-challenge-v2/calendar.csv\n/kaggle/input/rohlik-sales-forecasting-challenge-v2/test_weights.csv\n/kaggle/input/rohlik-sales-forecasting-challenge-v2/inventory.csv\n/kaggle/input/rohlik-sales-forecasting-challenge-v2/sales_train.csv\n/kaggle/input/rohlik-sales-forecasting-challenge-v2/sales_test.csv\n/kaggle/input/rohlik-sales-forecasting-challenge-v2/solution.csv\n","output_type":"stream"}],"execution_count":3},{"cell_type":"code","source":"import lightgbm as lgb\nfrom sklearn.model_selection import TimeSeriesSplit\nfrom sklearn.metrics import mean_absolute_error","metadata":{"_uuid":"82fd2cae-032a-4ebf-93e8-66ca53b95a08","_cell_guid":"66a0b12a-9db2-4d0e-a822-f4baac45aee3","trusted":true,"collapsed":false,"execution":{"iopub.status.busy":"2025-02-09T20:14:08.850289Z","iopub.execute_input":"2025-02-09T20:14:08.850824Z","iopub.status.idle":"2025-02-09T20:14:10.828136Z","shell.execute_reply.started":"2025-02-09T20:14:08.850786Z","shell.execute_reply":"2025-02-09T20:14:10.826898Z"},"jupyter":{"outputs_hidden":false}},"outputs":[],"execution_count":4},{"cell_type":"code","source":"# Adjust file paths as necessary\ntrain = pd.read_csv('/kaggle/input/rohlik-sales-forecasting-challenge-v2/sales_train.csv')\ntest = pd.read_csv('/kaggle/input/rohlik-sales-forecasting-challenge-v2/sales_test.csv')\ninventory = pd.read_csv('/kaggle/input/rohlik-sales-forecasting-challenge-v2/inventory.csv')\ncalendar = pd.read_csv('/kaggle/input/rohlik-sales-forecasting-challenge-v2/calendar.csv')\nweights = pd.read_csv('/kaggle/input/rohlik-sales-forecasting-challenge-v2/test_weights.csv')","metadata":{"_uuid":"e26c3178-06b1-491e-8b3a-85707c5a915e","_cell_guid":"f7984a33-edea-4467-b4f8-566d163753d2","trusted":true,"collapsed":false,"execution":{"iopub.status.busy":"2025-02-09T20:14:10.830059Z","iopub.execute_input":"2025-02-09T20:14:10.830651Z","iopub.status.idle":"2025-02-09T20:14:18.943410Z","shell.execute_reply.started":"2025-02-09T20:14:10.830612Z","shell.execute_reply":"2025-02-09T20:14:18.942376Z"},"jupyter":{"outputs_hidden":false}},"outputs":[],"execution_count":5},{"cell_type":"code","source":"train = train.merge(calendar, on=['warehouse', 'date'], how='left')\ntrain = train.merge(weights, on='unique_id', how='left')\ntrain = train.merge(inventory[['unique_id', 'product_unique_id', 'name']], on='unique_id', how='left')","metadata":{"_uuid":"77560840-d24e-4065-b7cb-d7cfe99eb9b3","_cell_guid":"47944ff6-6b03-4bda-bda3-2e4184002966","trusted":true,"collapsed":false,"execution":{"iopub.status.busy":"2025-02-09T20:14:18.945670Z","iopub.execute_input":"2025-02-09T20:14:18.946152Z","iopub.status.idle":"2025-02-09T20:14:22.436629Z","shell.execute_reply.started":"2025-02-09T20:14:18.946102Z","shell.execute_reply":"2025-02-09T20:14:22.435430Z"},"jupyter":{"outputs_hidden":false}},"outputs":[],"execution_count":6},{"cell_type":"code","source":"train['date'] = pd.to_datetime(train['date'])\ntest['date'] = pd.to_datetime(test['date'])\ncalendar['date'] = pd.to_datetime(calendar['date'])","metadata":{"_uuid":"5355c14e-07f9-4e9b-9ba9-54d8975c78e2","_cell_guid":"74522ec0-99ba-4542-9e96-ec835aa5308d","trusted":true,"collapsed":false,"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-02-09T20:14:22.438160Z","iopub.execute_input":"2025-02-09T20:14:22.438638Z","iopub.status.idle":"2025-02-09T20:14:23.183487Z","shell.execute_reply.started":"2025-02-09T20:14:22.438591Z","shell.execute_reply":"2025-02-09T20:14:23.182229Z"}},"outputs":[],"execution_count":7},{"cell_type":"code","source":"def date_features(df):\n    df[\"day_of_week\"] = df[\"date\"].dt.dayofweek\n    df[\"month\"] = df[\"date\"].dt.month\n    df[\"Day_of_Month\"] = df[\"date\"].dt.day\n    df[\"Week_of_Year\"] = df[\"date\"].dt.isocalendar().week\n    df[\"Date_Weekday\"] = df[\"date\"].dt.weekday\n    df[\"Date_Dayofyear\"] = df[\"date\"].dt.dayofyear\n    return df","metadata":{"_uuid":"347bddbf-8584-4bb3-8d5d-52804e63155c","_cell_guid":"185f120c-1a23-43bb-9d57-83502745c466","trusted":true,"collapsed":false,"execution":{"iopub.status.busy":"2025-02-09T17:32:25.141891Z","iopub.execute_input":"2025-02-09T17:32:25.142209Z","iopub.status.idle":"2025-02-09T17:32:34.858017Z","shell.execute_reply.started":"2025-02-09T17:32:25.142179Z","shell.execute_reply":"2025-02-09T17:32:34.856712Z"},"jupyter":{"outputs_hidden":false}},"outputs":[],"execution_count":6},{"cell_type":"code","source":"def category(df):\n    df['category'] = df['name'].str.split('_',expand=True)[0]\n    return df","metadata":{"trusted":true},"outputs":[],"execution_count":null},{"cell_type":"code","source":"# Merge weights into training data\ntrain['weight'] = train['weight'].fillna(1)","metadata":{"_uuid":"567cf0ae-d287-46a7-b035-1803cb7c1271","_cell_guid":"e3077d9e-f2a3-48d9-aa9e-b5ff18606e72","trusted":true,"collapsed":false,"execution":{"iopub.status.busy":"2025-02-09T17:32:34.860746Z","iopub.execute_input":"2025-02-09T17:32:34.861115Z","iopub.status.idle":"2025-02-09T17:32:34.898501Z","shell.execute_reply.started":"2025-02-09T17:32:34.861082Z","shell.execute_reply":"2025-02-09T17:32:34.897499Z"},"jupyter":{"outputs_hidden":false}},"outputs":[],"execution_count":7},{"cell_type":"code","source":"PERIODS = [14,16,18,21,30,60,90,120,180,270,350,600]\n\ndef lagged_product_sales(df):\n    for shift in PERIODS:\n        df[f'product_sales_{shift}']=df.groupby(['warehouse','name'])['sales'].shift(periods=shift)\n    return df","metadata":{"_uuid":"064e5c7c-8aac-4c3b-a54f-48ce774de020","_cell_guid":"8bd190bf-bebb-4c9e-bfdd-ccbdd8921705","trusted":true,"collapsed":false,"execution":{"iopub.status.busy":"2025-02-09T17:32:34.899738Z","iopub.execute_input":"2025-02-09T17:32:34.900061Z","iopub.status.idle":"2025-02-09T17:32:44.082192Z","shell.execute_reply.started":"2025-02-09T17:32:34.900031Z","shell.execute_reply":"2025-02-09T17:32:44.081118Z"},"jupyter":{"outputs_hidden":false}},"outputs":[],"execution_count":8},{"cell_type":"code","source":"train = date_features(train)\ntrain = category(train)\ntrain = lagged_product_sales(train)","metadata":{"trusted":true},"outputs":[],"execution_count":null},{"cell_type":"code","source":"train.fillna(method='bfill', inplace=True)","metadata":{"_uuid":"efbe2ac8-0d21-4dca-a71f-5882a28cb263","_cell_guid":"d3a83c4a-be3f-4db1-92b5-9184a0eda538","trusted":true,"collapsed":false,"execution":{"iopub.status.busy":"2025-02-09T17:32:44.083145Z","iopub.execute_input":"2025-02-09T17:32:44.083473Z","iopub.status.idle":"2025-02-09T17:32:46.478422Z","shell.execute_reply.started":"2025-02-09T17:32:44.083442Z","shell.execute_reply":"2025-02-09T17:32:46.477535Z"},"jupyter":{"outputs_hidden":false}},"outputs":[{"name":"stderr","text":"/tmp/ipykernel_24/30274837.py:1: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  train.fillna(method='bfill', inplace=True)\n","output_type":"stream"}],"execution_count":9},{"cell_type":"code","source":"# Function to reduce memory usage\ndef reduce_memory_usage(df):\n    for col in df.columns:\n        col_type = df[col].dtype\n        \n        # Skip datetime columns\n        if col_type == 'datetime64[ns]':\n            continue\n        \n        # Process numeric columns\n        if col_type != 'object':\n            c_min = df[col].min()\n            c_max = df[col].max()\n            \n            if str(col_type)[:3] == 'int':\n                if c_min > np.iinfo(np.int8).min and c_max < np.iinfo(np.int8).max:\n                    df[col] = df[col].astype(np.int8)\n                elif c_min > np.iinfo(np.int16).min and c_max < np.iinfo(np.int16).max:\n                    df[col] = df[col].astype(np.int16)\n                elif c_min > np.iinfo(np.int32).min and c_max < np.iinfo(np.int32).max:\n                    df[col] = df[col].astype(np.int32)\n                else:\n                    df[col] = df[col].astype(np.int64)\n            else:\n                # Handle float columns\n                if c_min > np.finfo(np.float32).min and c_max < np.finfo(np.float32).max:\n                    df[col] = df[col].astype(np.float32)\n                else:\n                    df[col] = df[col].astype(np.float64)\n        else:\n            # For object columns, consider categorical encoding\n            df[col] = df[col].astype('category')\n    \n    return df\n\n# Apply memory reduction to train and test\ntrain = reduce_memory_usage(train)\ntest = reduce_memory_usage(test)","metadata":{"_uuid":"ddf8117b-d432-40d8-a157-0c6d914e04e8","_cell_guid":"2179d1de-671d-4878-a83b-ef46216adbe5","trusted":true,"collapsed":false,"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-02-09T17:32:46.479738Z","iopub.execute_input":"2025-02-09T17:32:46.480171Z","iopub.status.idle":"2025-02-09T17:32:48.924033Z","shell.execute_reply.started":"2025-02-09T17:32:46.480127Z","shell.execute_reply":"2025-02-09T17:32:48.922811Z"}},"outputs":[],"execution_count":10},{"cell_type":"code","source":"train.columns","metadata":{"_uuid":"6d4d5857-b2fd-4f53-839e-97bf5cde530b","_cell_guid":"2d808221-75fa-40b9-aca9-46c1d1004aac","trusted":true,"collapsed":false,"execution":{"iopub.status.busy":"2025-02-09T17:32:48.925322Z","iopub.execute_input":"2025-02-09T17:32:48.925647Z","iopub.status.idle":"2025-02-09T17:32:48.933967Z","shell.execute_reply.started":"2025-02-09T17:32:48.925616Z","shell.execute_reply":"2025-02-09T17:32:48.932862Z"},"jupyter":{"outputs_hidden":false}},"outputs":[{"execution_count":11,"output_type":"execute_result","data":{"text/plain":"Index(['unique_id', 'date', 'warehouse', 'total_orders', 'sales',\n       'sell_price_main', 'availability', 'type_0_discount', 'type_1_discount',\n       'type_2_discount', 'type_3_discount', 'type_4_discount',\n       'type_5_discount', 'type_6_discount', 'holiday_name', 'holiday',\n       'shops_closed', 'winter_school_holidays', 'school_holidays', 'weight',\n       'product_unique_id', 'name', 'day_of_week', 'month', 'Day_of_Month',\n       'Week_of_Year', 'Date_Weekday', 'Date_Dayofyear', 'category',\n       'product_sales_14', 'product_sales_16', 'product_sales_18',\n       'product_sales_21', 'product_sales_30', 'product_sales_60',\n       'product_sales_90', 'product_sales_120', 'product_sales_180',\n       'product_sales_270', 'product_sales_350', 'product_sales_600'],\n      dtype='object')"},"metadata":{}}],"execution_count":11},{"cell_type":"code","source":"# Prepare data for LightGBM\nfeatures = ['total_orders', \n       'sell_price_main', 'type_0_discount', \n       'type_2_discount',\n       'name', 'day_of_week', 'month', 'Day_of_Month',\n       'Week_of_Year', 'Date_Weekday', 'Date_Dayofyear', 'category',\n       'product_sales_14', 'product_sales_16', 'product_sales_18',\n       'product_sales_21', 'product_sales_30', 'product_sales_60',\n       'product_sales_90', 'product_sales_120', 'product_sales_180',\n       'product_sales_270', 'product_sales_350', 'product_sales_600']\nX = train[features]\ny = train['sales']","metadata":{"_uuid":"4c619a31-c969-4fb0-8780-e9fcaa55d354","_cell_guid":"8fbaad30-220c-47a3-948c-aa9cb96fba41","trusted":true,"collapsed":false,"execution":{"iopub.status.busy":"2025-02-09T17:32:48.935527Z","iopub.execute_input":"2025-02-09T17:32:48.936062Z","iopub.status.idle":"2025-02-09T17:32:49.204366Z","shell.execute_reply.started":"2025-02-09T17:32:48.936012Z","shell.execute_reply":"2025-02-09T17:32:49.203412Z"},"jupyter":{"outputs_hidden":false}},"outputs":[],"execution_count":12},{"cell_type":"code","source":"# Define the number of splits for TimeSeriesSplit\ntscv = TimeSeriesSplit(n_splits=3)\n\n# Initialize lists to store results\nwmae_scores = []\n\n# Perform time series cross-validation\nfor train_index, val_index in tscv.split(X):\n    X_train, X_val = X.iloc[train_index], X.iloc[val_index]\n    y_train, y_val = y.iloc[train_index], y.iloc[val_index]","metadata":{"_uuid":"09bf8d0c-a52b-429c-aeb9-655722ac8cc1","_cell_guid":"a0e117ce-daa6-4164-9220-ac4bff885076","trusted":true,"collapsed":false,"execution":{"iopub.status.busy":"2025-02-09T17:32:49.205977Z","iopub.execute_input":"2025-02-09T17:32:49.206427Z","iopub.status.idle":"2025-02-09T17:32:50.609454Z","shell.execute_reply.started":"2025-02-09T17:32:49.206381Z","shell.execute_reply":"2025-02-09T17:32:50.608530Z"},"jupyter":{"outputs_hidden":false}},"outputs":[],"execution_count":13},{"cell_type":"code","source":"## Parameter from here: https://www.kaggle.com/code/meryentr/rohlik-sales-lightgbm-lb-20-75\nparams={ \n    'learning_rate': 0.021796506746095975,\n    'num_leaves': 93,\n    'max_depth': 10,\n    'min_child_samples': 25,\n    'subsample': 0.7057135664023435,\n    'colsample_bytree': 0.8528497905459008,\n    'reg_alpha': 0.036786449788597686,\n    'reg_lambda': 0.3151110021900479,\n    'num_boost_round': 9800,\n    'objective': 'regression',\n    'metric': 'mae',\n    'boosting_type': 'gbdt',\n}\n\n# Train LightGBM model\nmodel = lgb.LGBMRegressor(**params)\nmodel.fit(X_train, y_train)","metadata":{"_uuid":"9faf7826-7dba-436c-82c9-e042ef207854","_cell_guid":"3c077264-8be5-47d4-862e-ef135817b423","trusted":true,"collapsed":false,"execution":{"iopub.status.busy":"2025-02-09T20:11:12.577550Z","iopub.execute_input":"2025-02-09T20:11:12.577929Z","iopub.status.idle":"2025-02-09T20:11:12.607685Z","shell.execute_reply.started":"2025-02-09T20:11:12.577887Z","shell.execute_reply":"2025-02-09T20:11:12.606142Z"},"jupyter":{"outputs_hidden":false}},"outputs":[{"traceback":["\u001b[0;31m---------------------------------------------------------------------------\u001b[0m","\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)","Cell \u001b[0;32mIn[2], line 18\u001b[0m\n\u001b[1;32m      2\u001b[0m params\u001b[38;5;241m=\u001b[39m{ \n\u001b[1;32m      3\u001b[0m     \u001b[38;5;124m'\u001b[39m\u001b[38;5;124mlearning_rate\u001b[39m\u001b[38;5;124m'\u001b[39m: \u001b[38;5;241m0.021796506746095975\u001b[39m,\n\u001b[1;32m      4\u001b[0m     \u001b[38;5;124m'\u001b[39m\u001b[38;5;124mnum_leaves\u001b[39m\u001b[38;5;124m'\u001b[39m: \u001b[38;5;241m93\u001b[39m,\n\u001b[0;32m   (...)\u001b[0m\n\u001b[1;32m     14\u001b[0m     \u001b[38;5;124m'\u001b[39m\u001b[38;5;124mboosting_type\u001b[39m\u001b[38;5;124m'\u001b[39m: \u001b[38;5;124m'\u001b[39m\u001b[38;5;124mgbdt\u001b[39m\u001b[38;5;124m'\u001b[39m,\n\u001b[1;32m     15\u001b[0m }\n\u001b[1;32m     17\u001b[0m \u001b[38;5;66;03m# Train LightGBM model\u001b[39;00m\n\u001b[0;32m---> 18\u001b[0m model \u001b[38;5;241m=\u001b[39m \u001b[43mlgb\u001b[49m\u001b[38;5;241m.\u001b[39mLGBMRegressor(\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mparams)\n\u001b[1;32m     19\u001b[0m model\u001b[38;5;241m.\u001b[39mfit(X_train, y_train)\n","\u001b[0;31mNameError\u001b[0m: name 'lgb' is not defined"],"ename":"NameError","evalue":"name 'lgb' is not defined","output_type":"error"}],"execution_count":2},{"cell_type":"code","source":"# Evaluate training error\ny_train_pred = model.predict(X_train)\ntrain_wmae = mean_absolute_error(y_train, y_train_pred, sample_weight=train.loc[X_train.index, 'weight'])\nprint(f'Training WMAE: {train_wmae}')\n\n# Evaluate validation error\ny_val_pred = model.predict(X_val)\nval_wmae = mean_absolute_error(y_val, y_val_pred, sample_weight=train.loc[X_val.index, 'weight'])\nprint(f'Validation WMAE: {val_wmae}')","metadata":{"_uuid":"633d8b63-9899-4b4d-bf37-1bd2f2a2b09e","_cell_guid":"7d351fe5-b0d4-4ec9-9c68-a16db36351b9","trusted":true,"collapsed":false,"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-02-09T20:11:01.206800Z","iopub.execute_input":"2025-02-09T20:11:01.207380Z","iopub.status.idle":"2025-02-09T20:11:01.523727Z","shell.execute_reply.started":"2025-02-09T20:11:01.207312Z","shell.execute_reply":"2025-02-09T20:11:01.521802Z"}},"outputs":[{"traceback":["\u001b[0;31m---------------------------------------------------------------------------\u001b[0m","\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)","Cell \u001b[0;32mIn[1], line 2\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[38;5;66;03m# Evaluate training error\u001b[39;00m\n\u001b[0;32m----> 2\u001b[0m y_train_pred \u001b[38;5;241m=\u001b[39m \u001b[43mmodel\u001b[49m\u001b[38;5;241m.\u001b[39mpredict(X_train)\n\u001b[1;32m      3\u001b[0m train_wmae \u001b[38;5;241m=\u001b[39m mean_absolute_error(y_train, y_train_pred, sample_weight\u001b[38;5;241m=\u001b[39mtrain\u001b[38;5;241m.\u001b[39mloc[X_train\u001b[38;5;241m.\u001b[39mindex, \u001b[38;5;124m'\u001b[39m\u001b[38;5;124mweight\u001b[39m\u001b[38;5;124m'\u001b[39m])\n\u001b[1;32m      4\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mTraining WMAE: \u001b[39m\u001b[38;5;132;01m{\u001b[39;00mtrain_wmae\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m'\u001b[39m)\n","\u001b[0;31mNameError\u001b[0m: name 'model' is not defined"],"ename":"NameError","evalue":"name 'model' is not defined","output_type":"error"}],"execution_count":1},{"cell_type":"code","source":"test = date_features(test)\ntest = category(test)\ntest = lagged_product_sales(test)","metadata":{"trusted":true},"outputs":[],"execution_count":null},{"cell_type":"code","source":"test.fillna(method='bfill', inplace=True)\n\n# Ensure the test set has the same columns as the training set\nX_test = test[features]","metadata":{"trusted":true},"outputs":[],"execution_count":null},{"cell_type":"code","source":"# Predict on the test set\ntest_predictions = model.predict(X_test)\n\n# Add predictions to the test DataFrame\ntest['sales_hat'] = test_predictions","metadata":{"trusted":true},"outputs":[],"execution_count":null},{"cell_type":"code","source":"test['id'] = test['unique_id'].astype(str) + \"_\" + test['date'].astype(str)\n\n# Create the submission DataFrame\nsubmission = test[['id', 'sales_hat']]\n\n# Save the submission file\nsubmission.to_csv('submission.csv', index=False)","metadata":{"trusted":true},"outputs":[],"execution_count":null}]}
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "0623e2a7",
+   "metadata": {
+    "_cell_guid": "4f15d919-7652-403c-a073-f39f73457432",
+    "_uuid": "7706bf7e-ab7a-4ce7-b326-f816fa04bf03",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:46:32.175621Z",
+     "iopub.status.busy": "2025-02-11T07:46:32.175240Z",
+     "iopub.status.idle": "2025-02-11T07:46:33.150412Z",
+     "shell.execute_reply": "2025-02-11T07:46:33.149122Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 0.984707,
+     "end_time": "2025-02-11T07:46:33.152906",
+     "exception": false,
+     "start_time": "2025-02-11T07:46:32.168199",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "/kaggle/input/rohlik-sales-forecasting-challenge-v2/calendar.csv\n",
+      "/kaggle/input/rohlik-sales-forecasting-challenge-v2/test_weights.csv\n",
+      "/kaggle/input/rohlik-sales-forecasting-challenge-v2/inventory.csv\n",
+      "/kaggle/input/rohlik-sales-forecasting-challenge-v2/sales_train.csv\n",
+      "/kaggle/input/rohlik-sales-forecasting-challenge-v2/sales_test.csv\n",
+      "/kaggle/input/rohlik-sales-forecasting-challenge-v2/solution.csv\n"
+     ]
+    }
+   ],
+   "source": [
+    "# This Python 3 environment comes with many helpful analytics libraries installed\n",
+    "# It is defined by the kaggle/python Docker image: https://github.com/kaggle/docker-python\n",
+    "# For example, here's several helpful packages to load\n",
+    "\n",
+    "import numpy as np # linear algebra\n",
+    "import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)\n",
+    "\n",
+    "# Input data files are available in the read-only \"../input/\" directory\n",
+    "# For example, running this (by clicking run or pressing Shift+Enter) will list all files under the input directory\n",
+    "\n",
+    "import os\n",
+    "for dirname, _, filenames in os.walk('/kaggle/input'):\n",
+    "    for filename in filenames:\n",
+    "        print(os.path.join(dirname, filename))\n",
+    "\n",
+    "# You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using \"Save & Run All\" \n",
+    "# You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "5da39826",
+   "metadata": {
+    "_cell_guid": "9dbb0081-4679-459b-af26-591a4abd531d",
+    "_uuid": "206a70f6-3b57-4331-af9b-9febc8c14548",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:46:33.165366Z",
+     "iopub.status.busy": "2025-02-11T07:46:33.164847Z",
+     "iopub.status.idle": "2025-02-11T07:46:36.030867Z",
+     "shell.execute_reply": "2025-02-11T07:46:36.029727Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 2.875143,
+     "end_time": "2025-02-11T07:46:36.033468",
+     "exception": false,
+     "start_time": "2025-02-11T07:46:33.158325",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "import lightgbm as lgb\n",
+    "from sklearn.model_selection import TimeSeriesSplit\n",
+    "from sklearn.metrics import mean_absolute_error"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "35019ddc",
+   "metadata": {
+    "_cell_guid": "3cd66a87-4217-4bdf-b3b2-ce685b4e80aa",
+    "_uuid": "8efd9541-9034-4dda-8ed4-2d82ac392ad5",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:46:36.045818Z",
+     "iopub.status.busy": "2025-02-11T07:46:36.045237Z",
+     "iopub.status.idle": "2025-02-11T07:46:44.500199Z",
+     "shell.execute_reply": "2025-02-11T07:46:44.499015Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 8.463981,
+     "end_time": "2025-02-11T07:46:44.502720",
+     "exception": false,
+     "start_time": "2025-02-11T07:46:36.038739",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Adjust file paths as necessary\n",
+    "train = pd.read_csv('/kaggle/input/rohlik-sales-forecasting-challenge-v2/sales_train.csv')\n",
+    "test = pd.read_csv('/kaggle/input/rohlik-sales-forecasting-challenge-v2/sales_test.csv')\n",
+    "inventory = pd.read_csv('/kaggle/input/rohlik-sales-forecasting-challenge-v2/inventory.csv')\n",
+    "calendar = pd.read_csv('/kaggle/input/rohlik-sales-forecasting-challenge-v2/calendar.csv')\n",
+    "weights = pd.read_csv('/kaggle/input/rohlik-sales-forecasting-challenge-v2/test_weights.csv')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "dce08f73",
+   "metadata": {
+    "_cell_guid": "9fe9df98-3215-4daf-8713-7c9b5cde2af4",
+    "_uuid": "c03ce7fa-955b-47a3-adbe-917bfd435201",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:46:44.515893Z",
+     "iopub.status.busy": "2025-02-11T07:46:44.515527Z",
+     "iopub.status.idle": "2025-02-11T07:46:48.024759Z",
+     "shell.execute_reply": "2025-02-11T07:46:48.023663Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 3.518097,
+     "end_time": "2025-02-11T07:46:48.027284",
+     "exception": false,
+     "start_time": "2025-02-11T07:46:44.509187",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "train = train.merge(calendar, on=['warehouse', 'date'], how='left')\n",
+    "train = train.merge(weights, on='unique_id', how='left')\n",
+    "train = train.merge(inventory[['unique_id', 'product_unique_id', 'name']], on='unique_id', how='left')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "da7b636a",
+   "metadata": {
+    "_cell_guid": "27f4d8cd-e1fd-482b-b41f-54b0390a910d",
+    "_uuid": "3a9818a8-052b-4686-b1d4-25ae4c2aee12",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:46:48.039288Z",
+     "iopub.status.busy": "2025-02-11T07:46:48.038895Z",
+     "iopub.status.idle": "2025-02-11T07:46:48.053052Z",
+     "shell.execute_reply": "2025-02-11T07:46:48.051874Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 0.023207,
+     "end_time": "2025-02-11T07:46:48.055697",
+     "exception": false,
+     "start_time": "2025-02-11T07:46:48.032490",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "test = test.merge(inventory[['unique_id', 'product_unique_id', 'name']], on='unique_id', how='left')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "da8bc97a",
+   "metadata": {
+    "_cell_guid": "95d970c2-816d-4f76-bd29-5b4f6527a087",
+    "_uuid": "78a91a32-cb22-4248-8ba8-a302107f7353",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:46:48.067983Z",
+     "iopub.status.busy": "2025-02-11T07:46:48.067543Z",
+     "iopub.status.idle": "2025-02-11T07:46:48.850209Z",
+     "shell.execute_reply": "2025-02-11T07:46:48.848858Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 0.791667,
+     "end_time": "2025-02-11T07:46:48.852909",
+     "exception": false,
+     "start_time": "2025-02-11T07:46:48.061242",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "train['date'] = pd.to_datetime(train['date'])\n",
+    "test['date'] = pd.to_datetime(test['date'])\n",
+    "calendar['date'] = pd.to_datetime(calendar['date'])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "ec5b461f",
+   "metadata": {
+    "_cell_guid": "deb975bc-eae1-41df-94fc-7d1719f2e081",
+    "_uuid": "518f5130-8872-49ea-85e5-ff6cf755d667",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:46:48.866379Z",
+     "iopub.status.busy": "2025-02-11T07:46:48.865488Z",
+     "iopub.status.idle": "2025-02-11T07:46:48.871922Z",
+     "shell.execute_reply": "2025-02-11T07:46:48.870900Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 0.015491,
+     "end_time": "2025-02-11T07:46:48.874237",
+     "exception": false,
+     "start_time": "2025-02-11T07:46:48.858746",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "def date_features(df):\n",
+    "    df[\"day_of_week\"] = df[\"date\"].dt.dayofweek\n",
+    "    df[\"month\"] = df[\"date\"].dt.month\n",
+    "    df[\"Day_of_Month\"] = df[\"date\"].dt.day\n",
+    "    df[\"Week_of_Year\"] = df[\"date\"].dt.isocalendar().week\n",
+    "    df[\"Date_Weekday\"] = df[\"date\"].dt.weekday\n",
+    "    df[\"Date_Dayofyear\"] = df[\"date\"].dt.dayofyear\n",
+    "    return df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "9689d7c8",
+   "metadata": {
+    "_cell_guid": "f971aaf9-24ae-41d0-8a7a-feaef08cf757",
+    "_uuid": "945e7b90-c421-4dc7-a779-14e7448dd8dd",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:46:48.886847Z",
+     "iopub.status.busy": "2025-02-11T07:46:48.886410Z",
+     "iopub.status.idle": "2025-02-11T07:46:48.892158Z",
+     "shell.execute_reply": "2025-02-11T07:46:48.890675Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 0.015191,
+     "end_time": "2025-02-11T07:46:48.895032",
+     "exception": false,
+     "start_time": "2025-02-11T07:46:48.879841",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "def category(df):\n",
+    "    df['category'] = df['name'].str.split('_',expand=True)[0]\n",
+    "    return df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "9d0c9e5c",
+   "metadata": {
+    "_cell_guid": "ad13b37b-bf95-4629-a966-8f8c073a9d82",
+    "_uuid": "10f9d5d2-883a-4a61-b9d0-e8dfef9ccf4a",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:46:48.908239Z",
+     "iopub.status.busy": "2025-02-11T07:46:48.907693Z",
+     "iopub.status.idle": "2025-02-11T07:46:48.931942Z",
+     "shell.execute_reply": "2025-02-11T07:46:48.930695Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 0.033946,
+     "end_time": "2025-02-11T07:46:48.934464",
+     "exception": false,
+     "start_time": "2025-02-11T07:46:48.900518",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Merge weights into training data\n",
+    "train['weight'] = train['weight'].fillna(1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "ab86e854",
+   "metadata": {
+    "_cell_guid": "2412718a-5c01-4758-b9a4-bdbc65b7462d",
+    "_uuid": "9558b350-f4c1-4366-ad94-bc0b2c1ace1f",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:46:48.947710Z",
+     "iopub.status.busy": "2025-02-11T07:46:48.947277Z",
+     "iopub.status.idle": "2025-02-11T07:46:48.953874Z",
+     "shell.execute_reply": "2025-02-11T07:46:48.952717Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 0.015827,
+     "end_time": "2025-02-11T07:46:48.956092",
+     "exception": false,
+     "start_time": "2025-02-11T07:46:48.940265",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "PERIODS = [14, 16, 18, 21, 30, 60, 90, 120, 180, 270, 350, 600]\n",
+    "\n",
+    "def lagged_product_sales(df):\n",
+    "    if 'sales' in df.columns:  # Check if 'sales' column exists\n",
+    "        for shift in PERIODS:\n",
+    "            df[f'product_sales_{shift}'] = df.groupby(['warehouse', 'name'])['sales'].shift(periods=shift)\n",
+    "    else:\n",
+    "        # If 'sales' column is missing, fill lagged features with NaN or 0\n",
+    "        for shift in PERIODS:\n",
+    "            df[f'product_sales_{shift}'] = np.nan  # or 0\n",
+    "    return df"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "ba8b10b5",
+   "metadata": {
+    "_cell_guid": "de6bac99-f42a-45d9-9797-aa85be28cf09",
+    "_uuid": "1e361342-8082-4dd7-874d-0646154cddcb",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:46:48.969397Z",
+     "iopub.status.busy": "2025-02-11T07:46:48.968969Z",
+     "iopub.status.idle": "2025-02-11T07:47:07.517327Z",
+     "shell.execute_reply": "2025-02-11T07:47:07.515800Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 18.558601,
+     "end_time": "2025-02-11T07:47:07.520779",
+     "exception": false,
+     "start_time": "2025-02-11T07:46:48.962178",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "train = date_features(train)\n",
+    "train = category(train)\n",
+    "train = lagged_product_sales(train)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "f0cdd4e9",
+   "metadata": {
+    "_cell_guid": "ca4636fa-5818-4228-b01e-145acde0e8a5",
+    "_uuid": "d7913cf7-7521-4d58-ab43-7306e3f0b1ba",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:47:07.535776Z",
+     "iopub.status.busy": "2025-02-11T07:47:07.535381Z",
+     "iopub.status.idle": "2025-02-11T07:47:09.817918Z",
+     "shell.execute_reply": "2025-02-11T07:47:09.816762Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 2.293909,
+     "end_time": "2025-02-11T07:47:09.820380",
+     "exception": false,
+     "start_time": "2025-02-11T07:47:07.526471",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/tmp/ipykernel_17/30274837.py:1: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n",
+      "  train.fillna(method='bfill', inplace=True)\n"
+     ]
+    }
+   ],
+   "source": [
+    "train.fillna(method='bfill', inplace=True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "2c2d1dd2",
+   "metadata": {
+    "_cell_guid": "53c1eea1-adf4-4f8c-9712-d3b474645e35",
+    "_uuid": "fcba84ec-b048-4257-8b98-3441d22ebb2c",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:47:09.833378Z",
+     "iopub.status.busy": "2025-02-11T07:47:09.832938Z",
+     "iopub.status.idle": "2025-02-11T07:47:12.369318Z",
+     "shell.execute_reply": "2025-02-11T07:47:12.367931Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 2.545938,
+     "end_time": "2025-02-11T07:47:12.371908",
+     "exception": false,
+     "start_time": "2025-02-11T07:47:09.825970",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Function to reduce memory usage\n",
+    "def reduce_memory_usage(df):\n",
+    "    for col in df.columns:\n",
+    "        col_type = df[col].dtype\n",
+    "        \n",
+    "        # Skip datetime columns\n",
+    "        if col_type == 'datetime64[ns]':\n",
+    "            continue\n",
+    "        \n",
+    "        # Process numeric columns\n",
+    "        if col_type != 'object':\n",
+    "            c_min = df[col].min()\n",
+    "            c_max = df[col].max()\n",
+    "            \n",
+    "            if str(col_type)[:3] == 'int':\n",
+    "                if c_min > np.iinfo(np.int8).min and c_max < np.iinfo(np.int8).max:\n",
+    "                    df[col] = df[col].astype(np.int8)\n",
+    "                elif c_min > np.iinfo(np.int16).min and c_max < np.iinfo(np.int16).max:\n",
+    "                    df[col] = df[col].astype(np.int16)\n",
+    "                elif c_min > np.iinfo(np.int32).min and c_max < np.iinfo(np.int32).max:\n",
+    "                    df[col] = df[col].astype(np.int32)\n",
+    "                else:\n",
+    "                    df[col] = df[col].astype(np.int64)\n",
+    "            else:\n",
+    "                # Handle float columns\n",
+    "                if c_min > np.finfo(np.float32).min and c_max < np.finfo(np.float32).max:\n",
+    "                    df[col] = df[col].astype(np.float32)\n",
+    "                else:\n",
+    "                    df[col] = df[col].astype(np.float64)\n",
+    "        else:\n",
+    "            # For object columns, consider categorical encoding\n",
+    "            df[col] = df[col].astype('category')\n",
+    "    \n",
+    "    return df\n",
+    "\n",
+    "# Apply memory reduction to train and test\n",
+    "train = reduce_memory_usage(train)\n",
+    "test = reduce_memory_usage(test)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "68fa0926",
+   "metadata": {
+    "_cell_guid": "2660ca19-267f-4365-93b0-0dd4aa506ef0",
+    "_uuid": "56362b1d-8df7-4e9a-a14a-61e1e4e281cc",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:47:12.385043Z",
+     "iopub.status.busy": "2025-02-11T07:47:12.384660Z",
+     "iopub.status.idle": "2025-02-11T07:47:12.393451Z",
+     "shell.execute_reply": "2025-02-11T07:47:12.392126Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 0.018221,
+     "end_time": "2025-02-11T07:47:12.395986",
+     "exception": false,
+     "start_time": "2025-02-11T07:47:12.377765",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "Index(['unique_id', 'date', 'warehouse', 'total_orders', 'sales',\n",
+       "       'sell_price_main', 'availability', 'type_0_discount', 'type_1_discount',\n",
+       "       'type_2_discount', 'type_3_discount', 'type_4_discount',\n",
+       "       'type_5_discount', 'type_6_discount', 'holiday_name', 'holiday',\n",
+       "       'shops_closed', 'winter_school_holidays', 'school_holidays', 'weight',\n",
+       "       'product_unique_id', 'name', 'day_of_week', 'month', 'Day_of_Month',\n",
+       "       'Week_of_Year', 'Date_Weekday', 'Date_Dayofyear', 'category',\n",
+       "       'product_sales_14', 'product_sales_16', 'product_sales_18',\n",
+       "       'product_sales_21', 'product_sales_30', 'product_sales_60',\n",
+       "       'product_sales_90', 'product_sales_120', 'product_sales_180',\n",
+       "       'product_sales_270', 'product_sales_350', 'product_sales_600'],\n",
+       "      dtype='object')"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "train.columns"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "a7a83048",
+   "metadata": {
+    "_cell_guid": "5c1a1e4b-b37a-4ccf-beac-f2003e7cd874",
+    "_uuid": "71351c00-8faa-421c-ba90-f2ffa28e73f8",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:47:12.409380Z",
+     "iopub.status.busy": "2025-02-11T07:47:12.408987Z",
+     "iopub.status.idle": "2025-02-11T07:47:12.684835Z",
+     "shell.execute_reply": "2025-02-11T07:47:12.683581Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 0.285888,
+     "end_time": "2025-02-11T07:47:12.687826",
+     "exception": false,
+     "start_time": "2025-02-11T07:47:12.401938",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Prepare data for LightGBM\n",
+    "features = ['total_orders', \n",
+    "       'sell_price_main', 'type_0_discount', \n",
+    "       'type_2_discount',\n",
+    "       'name', 'day_of_week', 'month', 'Day_of_Month',\n",
+    "       'Week_of_Year', 'Date_Weekday', 'Date_Dayofyear', 'category',\n",
+    "       'product_sales_14', 'product_sales_16', 'product_sales_18',\n",
+    "       'product_sales_21', 'product_sales_30', 'product_sales_60',\n",
+    "       'product_sales_90', 'product_sales_120', 'product_sales_180',\n",
+    "       'product_sales_270', 'product_sales_350', 'product_sales_600']\n",
+    "X = train[features]\n",
+    "y = train['sales']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "dbf70aef",
+   "metadata": {
+    "_cell_guid": "b4071951-c44a-4aea-ab14-a5921442c8fa",
+    "_uuid": "b557ee69-cc99-48cb-bed9-dfe9a9236ad8",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:47:12.702033Z",
+     "iopub.status.busy": "2025-02-11T07:47:12.701632Z",
+     "iopub.status.idle": "2025-02-11T07:47:14.131821Z",
+     "shell.execute_reply": "2025-02-11T07:47:14.129908Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 1.44155,
+     "end_time": "2025-02-11T07:47:14.135742",
+     "exception": false,
+     "start_time": "2025-02-11T07:47:12.694192",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Define the number of splits for TimeSeriesSplit\n",
+    "tscv = TimeSeriesSplit(n_splits=3)\n",
+    "\n",
+    "# Initialize lists to store results\n",
+    "wmae_scores = []\n",
+    "\n",
+    "# Perform time series cross-validation\n",
+    "for train_index, val_index in tscv.split(X):\n",
+    "    X_train, X_val = X.iloc[train_index], X.iloc[val_index]\n",
+    "    y_train, y_val = y.iloc[train_index], y.iloc[val_index]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "0f1e42ed",
+   "metadata": {
+    "_cell_guid": "3d4b1d44-dac1-4da7-91c7-e16823d18069",
+    "_uuid": "0990842f-6819-4241-8518-c8c30c4311f4",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T07:47:14.150871Z",
+     "iopub.status.busy": "2025-02-11T07:47:14.149965Z",
+     "iopub.status.idle": "2025-02-11T08:00:10.047880Z",
+     "shell.execute_reply": "2025-02-11T08:00:10.046719Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 775.914207,
+     "end_time": "2025-02-11T08:00:10.056249",
+     "exception": false,
+     "start_time": "2025-02-11T07:47:14.142042",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/opt/conda/lib/python3.10/site-packages/lightgbm/engine.py:172: UserWarning: Found `num_boost_round` in params. Will use it instead of argument\n",
+      "  _log_warning(f\"Found `{alias}` in params. Will use it instead of argument\")\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[LightGBM] [Warning] num_iterations is set=4900, num_boost_round=4900 will be ignored. Current value: num_iterations=4900\n",
+      "[LightGBM] [Warning] Categorical features with more bins than the configured maximum bin number found.\n",
+      "[LightGBM] [Warning] For categorical features, max_bin and max_bin_by_feature may be ignored with a large number of categories.\n",
+      "[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.496046 seconds.\n",
+      "You can set `force_col_wise=true` to remove the overhead.\n",
+      "[LightGBM] [Info] Total Bins 6039\n",
+      "[LightGBM] [Info] Number of data points in the train set: 3005565, number of used features: 24\n",
+      "[LightGBM] [Info] Start training from score 112.953860\n"
+     ]
+    },
+    {
+     "data": {
+      "text/html": [
+       "<style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: \"▸\";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: \"▾\";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: \"\";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: \"\";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: \"\";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id=\"sk-container-id-1\" class=\"sk-top-container\"><div class=\"sk-text-repr-fallback\"><pre>LGBMRegressor(colsample_bytree=0.8528497905459008,\n",
+       "              learning_rate=0.021796506746095973, max_depth=10, metric=&#x27;mae&#x27;,\n",
+       "              min_child_samples=25, num_boost_round=4900, num_leaves=70,\n",
+       "              objective=&#x27;regression&#x27;, reg_alpha=0.036786449788597686,\n",
+       "              reg_lambda=0.3151110021900479, subsample=0.7057135664023435)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class=\"sk-container\" hidden><div class=\"sk-item\"><div class=\"sk-estimator sk-toggleable\"><input class=\"sk-toggleable__control sk-hidden--visually\" id=\"sk-estimator-id-1\" type=\"checkbox\" checked><label for=\"sk-estimator-id-1\" class=\"sk-toggleable__label sk-toggleable__label-arrow\">LGBMRegressor</label><div class=\"sk-toggleable__content\"><pre>LGBMRegressor(colsample_bytree=0.8528497905459008,\n",
+       "              learning_rate=0.021796506746095973, max_depth=10, metric=&#x27;mae&#x27;,\n",
+       "              min_child_samples=25, num_boost_round=4900, num_leaves=70,\n",
+       "              objective=&#x27;regression&#x27;, reg_alpha=0.036786449788597686,\n",
+       "              reg_lambda=0.3151110021900479, subsample=0.7057135664023435)</pre></div></div></div></div></div>"
+      ],
+      "text/plain": [
+       "LGBMRegressor(colsample_bytree=0.8528497905459008,\n",
+       "              learning_rate=0.021796506746095973, max_depth=10, metric='mae',\n",
+       "              min_child_samples=25, num_boost_round=4900, num_leaves=70,\n",
+       "              objective='regression', reg_alpha=0.036786449788597686,\n",
+       "              reg_lambda=0.3151110021900479, subsample=0.7057135664023435)"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "## Parameter from here: https://www.kaggle.com/code/meryentr/rohlik-sales-lightgbm-lb-20-75\n",
+    "params={ \n",
+    "    'learning_rate': 0.021796506746095975,\n",
+    "    'num_leaves': 70,\n",
+    "    'max_depth': 10,\n",
+    "    'min_child_samples': 25,\n",
+    "    'subsample': 0.7057135664023435,\n",
+    "    'colsample_bytree': 0.8528497905459008,\n",
+    "    'reg_alpha': 0.036786449788597686,\n",
+    "    'reg_lambda': 0.3151110021900479,\n",
+    "    'num_boost_round': 4900,\n",
+    "    'objective': 'regression',\n",
+    "    'metric': 'mae',\n",
+    "    'boosting_type': 'gbdt',\n",
+    "}\n",
+    "\n",
+    "# Train LightGBM model\n",
+    "model = lgb.LGBMRegressor(**params)\n",
+    "model.fit(X_train, y_train)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "cd6717a5",
+   "metadata": {
+    "_cell_guid": "6fc9b68e-cae2-4ee7-80c9-8ffa16c80ab7",
+    "_uuid": "7b1858ca-daf7-46e7-90c7-e6b8aee67eca",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T08:00:10.070471Z",
+     "iopub.status.busy": "2025-02-11T08:00:10.070050Z",
+     "iopub.status.idle": "2025-02-11T09:46:07.919475Z",
+     "shell.execute_reply": "2025-02-11T09:46:07.918126Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 6357.866455,
+     "end_time": "2025-02-11T09:46:07.928898",
+     "exception": false,
+     "start_time": "2025-02-11T08:00:10.062443",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Training WMAE: 17.38474664494209\n",
+      "Validation WMAE: 28.839424109626194\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Evaluate training error\n",
+    "y_train_pred = model.predict(X_train)\n",
+    "train_wmae = mean_absolute_error(y_train, y_train_pred, sample_weight=train.loc[X_train.index, 'weight'])\n",
+    "print(f'Training WMAE: {train_wmae}')\n",
+    "\n",
+    "# Evaluate validation error\n",
+    "y_val_pred = model.predict(X_val)\n",
+    "val_wmae = mean_absolute_error(y_val, y_val_pred, sample_weight=train.loc[X_val.index, 'weight'])\n",
+    "print(f'Validation WMAE: {val_wmae}')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "7a4b1d67",
+   "metadata": {
+    "_cell_guid": "86bbea9c-d45c-4ef4-a041-e6219bdfa098",
+    "_uuid": "ad7dbe66-69b6-49da-a4ff-cd2fe6b58f1f",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T09:46:07.943810Z",
+     "iopub.status.busy": "2025-02-11T09:46:07.943399Z",
+     "iopub.status.idle": "2025-02-11T09:46:07.990922Z",
+     "shell.execute_reply": "2025-02-11T09:46:07.989945Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 0.05807,
+     "end_time": "2025-02-11T09:46:07.993478",
+     "exception": false,
+     "start_time": "2025-02-11T09:46:07.935408",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "test = date_features(test)\n",
+    "test = category(test)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "5a8a8a63",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-02-11T09:46:08.009160Z",
+     "iopub.status.busy": "2025-02-11T09:46:08.008337Z",
+     "iopub.status.idle": "2025-02-11T09:46:09.973651Z",
+     "shell.execute_reply": "2025-02-11T09:46:09.972711Z"
+    },
+    "papermill": {
+     "duration": 1.975736,
+     "end_time": "2025-02-11T09:46:09.976047",
+     "exception": false,
+     "start_time": "2025-02-11T09:46:08.000311",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
+      "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
+      "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
+      "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
+      "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
+      "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
+      "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
+      "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
+      "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
+      "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
+      "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
+      "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Approximate lagged features for test using the last known values from train\n",
+    "for shift in PERIODS:\n",
+    "    last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
+    "    last_lag_values.rename(columns={f'product_sales_{shift}': f'product_sales_{shift}'}, inplace=True)\n",
+    "    test = test.merge(last_lag_values, on=['warehouse', 'name'], how='left')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "0d8e1171",
+   "metadata": {
+    "_cell_guid": "c8efc739-bc8c-430e-970f-e61bc8b931bf",
+    "_uuid": "1194d812-9214-47f4-ab47-02a6f326350a",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T09:46:09.991597Z",
+     "iopub.status.busy": "2025-02-11T09:46:09.991200Z",
+     "iopub.status.idle": "2025-02-11T09:46:10.011221Z",
+     "shell.execute_reply": "2025-02-11T09:46:10.010113Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 0.030429,
+     "end_time": "2025-02-11T09:46:10.013473",
+     "exception": false,
+     "start_time": "2025-02-11T09:46:09.983044",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "/tmp/ipykernel_17/783850029.py:1: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n",
+      "  test.fillna(method='bfill', inplace=True)\n"
+     ]
+    }
+   ],
+   "source": [
+    "test.fillna(method='bfill', inplace=True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "88b26111",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-02-11T09:46:10.029223Z",
+     "iopub.status.busy": "2025-02-11T09:46:10.028768Z",
+     "iopub.status.idle": "2025-02-11T09:46:10.049091Z",
+     "shell.execute_reply": "2025-02-11T09:46:10.048014Z"
+    },
+    "papermill": {
+     "duration": 0.0312,
+     "end_time": "2025-02-11T09:46:10.051815",
+     "exception": false,
+     "start_time": "2025-02-11T09:46:10.020615",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Align categorical features between train and test\n",
+    "categorical_features = ['name', 'category']  # Add other categorical columns here\n",
+    "\n",
+    "for col in categorical_features:\n",
+    "    # Get unique categories from the training set\n",
+    "    train_categories = train[col].cat.categories\n",
+    "    \n",
+    "    # Reorder and align the test set's categories with the training set\n",
+    "    test[col] = test[col].astype('category').cat.set_categories(train_categories)\n",
+    "    \n",
+    "    # Fill missing categories with \"Unknown\"\n",
+    "    test[col] = test[col].cat.add_categories(['Unknown']).fillna('Unknown')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "f4e5a779",
+   "metadata": {
+    "_cell_guid": "f8cd7ae4-b459-47bb-8429-74b7f77727a4",
+    "_uuid": "1a27e5a1-4c11-4473-92db-ae329f4a2371",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T09:46:10.067677Z",
+     "iopub.status.busy": "2025-02-11T09:46:10.067273Z",
+     "iopub.status.idle": "2025-02-11T09:47:23.017692Z",
+     "shell.execute_reply": "2025-02-11T09:47:23.016555Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 72.961254,
+     "end_time": "2025-02-11T09:47:23.020269",
+     "exception": false,
+     "start_time": "2025-02-11T09:46:10.059015",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Ensure the test set has the same columns as the training set\n",
+    "X_test = test[features]\n",
+    "\n",
+    "# Predict on the test set\n",
+    "test_predictions = model.predict(X_test)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "5cb21578",
+   "metadata": {
+    "_cell_guid": "00b8ab33-d2bc-46a3-ad24-1d60cf59d6c2",
+    "_uuid": "496af11a-2df6-4c0b-b4ee-5732a9592901",
+    "collapsed": false,
+    "execution": {
+     "iopub.execute_input": "2025-02-11T09:47:23.036463Z",
+     "iopub.status.busy": "2025-02-11T09:47:23.036039Z",
+     "iopub.status.idle": "2025-02-11T09:47:23.210391Z",
+     "shell.execute_reply": "2025-02-11T09:47:23.209350Z"
+    },
+    "jupyter": {
+     "outputs_hidden": false
+    },
+    "papermill": {
+     "duration": 0.185289,
+     "end_time": "2025-02-11T09:47:23.212875",
+     "exception": false,
+     "start_time": "2025-02-11T09:47:23.027586",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Add predictions to the test DataFrame\n",
+    "test['sales_hat'] = test_predictions\n",
+    "\n",
+    "# Create the submission file\n",
+    "test['id'] = test['unique_id'].astype(str) + \"_\" + test['date'].astype(str)\n",
+    "submission = test[['id', 'sales_hat']]\n",
+    "submission.to_csv('submission.csv', index=False)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kaggle": {
+   "accelerator": "none",
+   "dataSources": [
+    {
+     "databundleVersionId": 10173359,
+     "sourceId": 88742,
+     "sourceType": "competition"
+    }
+   ],
+   "dockerImageVersionId": 30804,
+   "isGpuEnabled": false,
+   "isInternetEnabled": true,
+   "language": "python",
+   "sourceType": "notebook"
+  },
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.14"
+  },
+  "papermill": {
+   "default_parameters": {},
+   "duration": 7255.499588,
+   "end_time": "2025-02-11T09:47:24.143508",
+   "environment_variables": {},
+   "exception": null,
+   "input_path": "__notebook__.ipynb",
+   "output_path": "__notebook__.ipynb",
+   "parameters": {},
+   "start_time": "2025-02-11T07:46:28.643920",
+   "version": "2.6.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
