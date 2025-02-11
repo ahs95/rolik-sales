@@ -3,25 +3,25 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "0623e2a7",
+   "id": "05f93e96",
    "metadata": {
     "_cell_guid": "4f15d919-7652-403c-a073-f39f73457432",
     "_uuid": "7706bf7e-ab7a-4ce7-b326-f816fa04bf03",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:46:32.175621Z",
-     "iopub.status.busy": "2025-02-11T07:46:32.175240Z",
-     "iopub.status.idle": "2025-02-11T07:46:33.150412Z",
-     "shell.execute_reply": "2025-02-11T07:46:33.149122Z"
+     "iopub.execute_input": "2025-02-11T14:37:17.343631Z",
+     "iopub.status.busy": "2025-02-11T14:37:17.343279Z",
+     "iopub.status.idle": "2025-02-11T14:37:18.420060Z",
+     "shell.execute_reply": "2025-02-11T14:37:18.418608Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.984707,
-     "end_time": "2025-02-11T07:46:33.152906",
+     "duration": 1.084499,
+     "end_time": "2025-02-11T14:37:18.422051",
      "exception": false,
-     "start_time": "2025-02-11T07:46:32.168199",
+     "start_time": "2025-02-11T14:37:17.337552",
      "status": "completed"
     },
     "tags": []
@@ -63,25 +63,25 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "5da39826",
+   "id": "d0cd0fa8",
    "metadata": {
     "_cell_guid": "9dbb0081-4679-459b-af26-591a4abd531d",
     "_uuid": "206a70f6-3b57-4331-af9b-9febc8c14548",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:46:33.165366Z",
-     "iopub.status.busy": "2025-02-11T07:46:33.164847Z",
-     "iopub.status.idle": "2025-02-11T07:46:36.030867Z",
-     "shell.execute_reply": "2025-02-11T07:46:36.029727Z"
+     "iopub.execute_input": "2025-02-11T14:37:18.433392Z",
+     "iopub.status.busy": "2025-02-11T14:37:18.432967Z",
+     "iopub.status.idle": "2025-02-11T14:37:21.452192Z",
+     "shell.execute_reply": "2025-02-11T14:37:21.451348Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 2.875143,
-     "end_time": "2025-02-11T07:46:36.033468",
+     "duration": 3.026679,
+     "end_time": "2025-02-11T14:37:21.454166",
      "exception": false,
-     "start_time": "2025-02-11T07:46:33.158325",
+     "start_time": "2025-02-11T14:37:18.427487",
      "status": "completed"
     },
     "tags": []
@@ -96,25 +96,25 @@
   {
    "cell_type": "code",
    "execution_count": 3,
-   "id": "35019ddc",
+   "id": "13990edf",
    "metadata": {
     "_cell_guid": "3cd66a87-4217-4bdf-b3b2-ce685b4e80aa",
     "_uuid": "8efd9541-9034-4dda-8ed4-2d82ac392ad5",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:46:36.045818Z",
-     "iopub.status.busy": "2025-02-11T07:46:36.045237Z",
-     "iopub.status.idle": "2025-02-11T07:46:44.500199Z",
-     "shell.execute_reply": "2025-02-11T07:46:44.499015Z"
+     "iopub.execute_input": "2025-02-11T14:37:21.463541Z",
+     "iopub.status.busy": "2025-02-11T14:37:21.463024Z",
+     "iopub.status.idle": "2025-02-11T14:37:27.362578Z",
+     "shell.execute_reply": "2025-02-11T14:37:27.361887Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 8.463981,
-     "end_time": "2025-02-11T07:46:44.502720",
+     "duration": 5.905945,
+     "end_time": "2025-02-11T14:37:27.364226",
      "exception": false,
-     "start_time": "2025-02-11T07:46:36.038739",
+     "start_time": "2025-02-11T14:37:21.458281",
      "status": "completed"
     },
     "tags": []
@@ -132,25 +132,25 @@
   {
    "cell_type": "code",
    "execution_count": 4,
-   "id": "dce08f73",
+   "id": "ca9ece25",
    "metadata": {
     "_cell_guid": "9fe9df98-3215-4daf-8713-7c9b5cde2af4",
     "_uuid": "c03ce7fa-955b-47a3-adbe-917bfd435201",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:46:44.515893Z",
-     "iopub.status.busy": "2025-02-11T07:46:44.515527Z",
-     "iopub.status.idle": "2025-02-11T07:46:48.024759Z",
-     "shell.execute_reply": "2025-02-11T07:46:48.023663Z"
+     "iopub.execute_input": "2025-02-11T14:37:27.374020Z",
+     "iopub.status.busy": "2025-02-11T14:37:27.373594Z",
+     "iopub.status.idle": "2025-02-11T14:37:29.227762Z",
+     "shell.execute_reply": "2025-02-11T14:37:29.226597Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 3.518097,
-     "end_time": "2025-02-11T07:46:48.027284",
+     "duration": 1.861143,
+     "end_time": "2025-02-11T14:37:29.230135",
      "exception": false,
-     "start_time": "2025-02-11T07:46:44.509187",
+     "start_time": "2025-02-11T14:37:27.368992",
      "status": "completed"
     },
     "tags": []
@@ -165,25 +165,25 @@
   {
    "cell_type": "code",
    "execution_count": 5,
-   "id": "da7b636a",
+   "id": "a3151cdc",
    "metadata": {
     "_cell_guid": "27f4d8cd-e1fd-482b-b41f-54b0390a910d",
     "_uuid": "3a9818a8-052b-4686-b1d4-25ae4c2aee12",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:46:48.039288Z",
-     "iopub.status.busy": "2025-02-11T07:46:48.038895Z",
-     "iopub.status.idle": "2025-02-11T07:46:48.053052Z",
-     "shell.execute_reply": "2025-02-11T07:46:48.051874Z"
+     "iopub.execute_input": "2025-02-11T14:37:29.239631Z",
+     "iopub.status.busy": "2025-02-11T14:37:29.239285Z",
+     "iopub.status.idle": "2025-02-11T14:37:29.250515Z",
+     "shell.execute_reply": "2025-02-11T14:37:29.249442Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.023207,
-     "end_time": "2025-02-11T07:46:48.055697",
+     "duration": 0.018319,
+     "end_time": "2025-02-11T14:37:29.252616",
      "exception": false,
-     "start_time": "2025-02-11T07:46:48.032490",
+     "start_time": "2025-02-11T14:37:29.234297",
      "status": "completed"
     },
     "tags": []
@@ -196,25 +196,25 @@
   {
    "cell_type": "code",
    "execution_count": 6,
-   "id": "da8bc97a",
+   "id": "63a19ac1",
    "metadata": {
     "_cell_guid": "95d970c2-816d-4f76-bd29-5b4f6527a087",
     "_uuid": "78a91a32-cb22-4248-8ba8-a302107f7353",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:46:48.067983Z",
-     "iopub.status.busy": "2025-02-11T07:46:48.067543Z",
-     "iopub.status.idle": "2025-02-11T07:46:48.850209Z",
-     "shell.execute_reply": "2025-02-11T07:46:48.848858Z"
+     "iopub.execute_input": "2025-02-11T14:37:29.261641Z",
+     "iopub.status.busy": "2025-02-11T14:37:29.261263Z",
+     "iopub.status.idle": "2025-02-11T14:37:29.781540Z",
+     "shell.execute_reply": "2025-02-11T14:37:29.780529Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.791667,
-     "end_time": "2025-02-11T07:46:48.852909",
+     "duration": 0.52725,
+     "end_time": "2025-02-11T14:37:29.783803",
      "exception": false,
-     "start_time": "2025-02-11T07:46:48.061242",
+     "start_time": "2025-02-11T14:37:29.256553",
      "status": "completed"
     },
     "tags": []
@@ -229,25 +229,25 @@
   {
    "cell_type": "code",
    "execution_count": 7,
-   "id": "ec5b461f",
+   "id": "e26d598c",
    "metadata": {
     "_cell_guid": "deb975bc-eae1-41df-94fc-7d1719f2e081",
     "_uuid": "518f5130-8872-49ea-85e5-ff6cf755d667",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:46:48.866379Z",
-     "iopub.status.busy": "2025-02-11T07:46:48.865488Z",
-     "iopub.status.idle": "2025-02-11T07:46:48.871922Z",
-     "shell.execute_reply": "2025-02-11T07:46:48.870900Z"
+     "iopub.execute_input": "2025-02-11T14:37:29.793256Z",
+     "iopub.status.busy": "2025-02-11T14:37:29.792888Z",
+     "iopub.status.idle": "2025-02-11T14:37:29.798749Z",
+     "shell.execute_reply": "2025-02-11T14:37:29.797786Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.015491,
-     "end_time": "2025-02-11T07:46:48.874237",
+     "duration": 0.012676,
+     "end_time": "2025-02-11T14:37:29.800702",
      "exception": false,
-     "start_time": "2025-02-11T07:46:48.858746",
+     "start_time": "2025-02-11T14:37:29.788026",
      "status": "completed"
     },
     "tags": []
@@ -267,25 +267,25 @@
   {
    "cell_type": "code",
    "execution_count": 8,
-   "id": "9689d7c8",
+   "id": "5533b7d9",
    "metadata": {
     "_cell_guid": "f971aaf9-24ae-41d0-8a7a-feaef08cf757",
     "_uuid": "945e7b90-c421-4dc7-a779-14e7448dd8dd",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:46:48.886847Z",
-     "iopub.status.busy": "2025-02-11T07:46:48.886410Z",
-     "iopub.status.idle": "2025-02-11T07:46:48.892158Z",
-     "shell.execute_reply": "2025-02-11T07:46:48.890675Z"
+     "iopub.execute_input": "2025-02-11T14:37:29.809813Z",
+     "iopub.status.busy": "2025-02-11T14:37:29.809496Z",
+     "iopub.status.idle": "2025-02-11T14:37:29.814177Z",
+     "shell.execute_reply": "2025-02-11T14:37:29.813081Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.015191,
-     "end_time": "2025-02-11T07:46:48.895032",
+     "duration": 0.011763,
+     "end_time": "2025-02-11T14:37:29.816514",
      "exception": false,
-     "start_time": "2025-02-11T07:46:48.879841",
+     "start_time": "2025-02-11T14:37:29.804751",
      "status": "completed"
     },
     "tags": []
@@ -300,25 +300,25 @@
   {
    "cell_type": "code",
    "execution_count": 9,
-   "id": "9d0c9e5c",
+   "id": "c9221c5e",
    "metadata": {
     "_cell_guid": "ad13b37b-bf95-4629-a966-8f8c073a9d82",
     "_uuid": "10f9d5d2-883a-4a61-b9d0-e8dfef9ccf4a",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:46:48.908239Z",
-     "iopub.status.busy": "2025-02-11T07:46:48.907693Z",
-     "iopub.status.idle": "2025-02-11T07:46:48.931942Z",
-     "shell.execute_reply": "2025-02-11T07:46:48.930695Z"
+     "iopub.execute_input": "2025-02-11T14:37:29.826040Z",
+     "iopub.status.busy": "2025-02-11T14:37:29.825705Z",
+     "iopub.status.idle": "2025-02-11T14:37:29.838422Z",
+     "shell.execute_reply": "2025-02-11T14:37:29.837497Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.033946,
-     "end_time": "2025-02-11T07:46:48.934464",
+     "duration": 0.019972,
+     "end_time": "2025-02-11T14:37:29.840709",
      "exception": false,
-     "start_time": "2025-02-11T07:46:48.900518",
+     "start_time": "2025-02-11T14:37:29.820737",
      "status": "completed"
     },
     "tags": []
@@ -332,32 +332,32 @@
   {
    "cell_type": "code",
    "execution_count": 10,
-   "id": "ab86e854",
+   "id": "b1ed3254",
    "metadata": {
     "_cell_guid": "2412718a-5c01-4758-b9a4-bdbc65b7462d",
     "_uuid": "9558b350-f4c1-4366-ad94-bc0b2c1ace1f",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:46:48.947710Z",
-     "iopub.status.busy": "2025-02-11T07:46:48.947277Z",
-     "iopub.status.idle": "2025-02-11T07:46:48.953874Z",
-     "shell.execute_reply": "2025-02-11T07:46:48.952717Z"
+     "iopub.execute_input": "2025-02-11T14:37:29.854699Z",
+     "iopub.status.busy": "2025-02-11T14:37:29.854280Z",
+     "iopub.status.idle": "2025-02-11T14:37:29.860605Z",
+     "shell.execute_reply": "2025-02-11T14:37:29.859513Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.015827,
-     "end_time": "2025-02-11T07:46:48.956092",
+     "duration": 0.015374,
+     "end_time": "2025-02-11T14:37:29.862368",
      "exception": false,
-     "start_time": "2025-02-11T07:46:48.940265",
+     "start_time": "2025-02-11T14:37:29.846994",
      "status": "completed"
     },
     "tags": []
    },
    "outputs": [],
    "source": [
-    "PERIODS = [14, 16, 18, 21, 30, 60, 90, 120, 180, 270, 350, 600]\n",
+    "PERIODS = [7, 14, 16, 18, 21, 30, 60, 90, 120, 180, 270, 350, 600, 1000]\n",
     "\n",
     "def lagged_product_sales(df):\n",
     "    if 'sales' in df.columns:  # Check if 'sales' column exists\n",
@@ -373,25 +373,122 @@
   {
    "cell_type": "code",
    "execution_count": 11,
-   "id": "ba8b10b5",
+   "id": "3ad72339",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-02-11T14:37:29.872997Z",
+     "iopub.status.busy": "2025-02-11T14:37:29.872599Z",
+     "iopub.status.idle": "2025-02-11T14:37:30.021962Z",
+     "shell.execute_reply": "2025-02-11T14:37:30.020953Z"
+    },
+    "papermill": {
+     "duration": 0.156905,
+     "end_time": "2025-02-11T14:37:30.024057",
+     "exception": false,
+     "start_time": "2025-02-11T14:37:29.867152",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "train['price_discount_interaction'] = train['sell_price_main'] * train['type_0_discount']\n",
+    "test['price_discount_interaction'] = test['sell_price_main'] * test['type_0_discount']\n",
+    "\n",
+    "# Add a small constant to avoid log(0)\n",
+    "train['log_total_orders'] = np.log1p(train['total_orders'])\n",
+    "test['log_total_orders'] = np.log1p(test['total_orders'])\n",
+    "\n",
+    "# Create polynomial features\n",
+    "train['log_total_orders_sq'] = train['log_total_orders'] ** 2\n",
+    "train['log_total_orders_cube'] = train['log_total_orders'] ** 3\n",
+    "\n",
+    "test['log_total_orders_sq'] = test['log_total_orders'] ** 2\n",
+    "test['log_total_orders_cube'] = test['log_total_orders'] ** 3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "4db4042d",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-02-11T14:37:30.033669Z",
+     "iopub.status.busy": "2025-02-11T14:37:30.033284Z",
+     "iopub.status.idle": "2025-02-11T14:37:30.047893Z",
+     "shell.execute_reply": "2025-02-11T14:37:30.047006Z"
+    },
+    "papermill": {
+     "duration": 0.021581,
+     "end_time": "2025-02-11T14:37:30.049837",
+     "exception": false,
+     "start_time": "2025-02-11T14:37:30.028256",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "train['log_total_orders_discount'] = train['log_total_orders'] * train['type_0_discount']\n",
+    "test['log_total_orders_discount'] = test['log_total_orders'] * test['type_0_discount']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "50ca3fd0",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-02-11T14:37:30.059542Z",
+     "iopub.status.busy": "2025-02-11T14:37:30.059164Z",
+     "iopub.status.idle": "2025-02-11T14:37:30.191988Z",
+     "shell.execute_reply": "2025-02-11T14:37:30.190792Z"
+    },
+    "papermill": {
+     "duration": 0.139894,
+     "end_time": "2025-02-11T14:37:30.194033",
+     "exception": false,
+     "start_time": "2025-02-11T14:37:30.054139",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Add a small constant to avoid log(0)\n",
+    "train['log_sell_price_main'] = np.log1p(train['sell_price_main'])\n",
+    "test['log_sell_price_main'] = np.log1p(test['sell_price_main'])\n",
+    "\n",
+    "# Create polynomial features\n",
+    "train['log_sell_price_sq'] = train['sell_price_main'] ** 2\n",
+    "train['log_sell_price_cube'] = train['sell_price_main'] ** 3\n",
+    "\n",
+    "test['log_sell_price_sq'] = test['sell_price_main'] ** 2\n",
+    "test['log_sell_price_cube'] = test['sell_price_main'] ** 3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "9842d146",
    "metadata": {
     "_cell_guid": "de6bac99-f42a-45d9-9797-aa85be28cf09",
     "_uuid": "1e361342-8082-4dd7-874d-0646154cddcb",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:46:48.969397Z",
-     "iopub.status.busy": "2025-02-11T07:46:48.968969Z",
-     "iopub.status.idle": "2025-02-11T07:47:07.517327Z",
-     "shell.execute_reply": "2025-02-11T07:47:07.515800Z"
+     "iopub.execute_input": "2025-02-11T14:37:30.203717Z",
+     "iopub.status.busy": "2025-02-11T14:37:30.203343Z",
+     "iopub.status.idle": "2025-02-11T14:37:42.838270Z",
+     "shell.execute_reply": "2025-02-11T14:37:42.837053Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 18.558601,
-     "end_time": "2025-02-11T07:47:07.520779",
+     "duration": 12.642234,
+     "end_time": "2025-02-11T14:37:42.840610",
      "exception": false,
-     "start_time": "2025-02-11T07:46:48.962178",
+     "start_time": "2025-02-11T14:37:30.198376",
      "status": "completed"
     },
     "tags": []
@@ -405,26 +502,20 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 12,
-   "id": "f0cdd4e9",
+   "execution_count": 15,
+   "id": "ff434378",
    "metadata": {
-    "_cell_guid": "ca4636fa-5818-4228-b01e-145acde0e8a5",
-    "_uuid": "d7913cf7-7521-4d58-ab43-7306e3f0b1ba",
-    "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:47:07.535776Z",
-     "iopub.status.busy": "2025-02-11T07:47:07.535381Z",
-     "iopub.status.idle": "2025-02-11T07:47:09.817918Z",
-     "shell.execute_reply": "2025-02-11T07:47:09.816762Z"
-    },
-    "jupyter": {
-     "outputs_hidden": false
+     "iopub.execute_input": "2025-02-11T14:37:42.851376Z",
+     "iopub.status.busy": "2025-02-11T14:37:42.851009Z",
+     "iopub.status.idle": "2025-02-11T14:37:44.379973Z",
+     "shell.execute_reply": "2025-02-11T14:37:44.379171Z"
     },
     "papermill": {
-     "duration": 2.293909,
-     "end_time": "2025-02-11T07:47:09.820380",
+     "duration": 1.536435,
+     "end_time": "2025-02-11T14:37:44.381887",
      "exception": false,
-     "start_time": "2025-02-11T07:47:07.526471",
+     "start_time": "2025-02-11T14:37:42.845452",
      "status": "completed"
     },
     "tags": []
@@ -434,37 +525,38 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "/tmp/ipykernel_17/30274837.py:1: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n",
+      "/tmp/ipykernel_17/2070509932.py:2: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n",
       "  train.fillna(method='bfill', inplace=True)\n"
      ]
     }
    ],
    "source": [
+    "# Fill missing values in train\n",
     "train.fillna(method='bfill', inplace=True)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 13,
-   "id": "2c2d1dd2",
+   "execution_count": 16,
+   "id": "8e315ba0",
    "metadata": {
     "_cell_guid": "53c1eea1-adf4-4f8c-9712-d3b474645e35",
     "_uuid": "fcba84ec-b048-4257-8b98-3441d22ebb2c",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:47:09.833378Z",
-     "iopub.status.busy": "2025-02-11T07:47:09.832938Z",
-     "iopub.status.idle": "2025-02-11T07:47:12.369318Z",
-     "shell.execute_reply": "2025-02-11T07:47:12.367931Z"
+     "iopub.execute_input": "2025-02-11T14:37:44.391203Z",
+     "iopub.status.busy": "2025-02-11T14:37:44.390903Z",
+     "iopub.status.idle": "2025-02-11T14:37:45.951198Z",
+     "shell.execute_reply": "2025-02-11T14:37:45.950197Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 2.545938,
-     "end_time": "2025-02-11T07:47:12.371908",
+     "duration": 1.567004,
+     "end_time": "2025-02-11T14:37:45.953150",
      "exception": false,
-     "start_time": "2025-02-11T07:47:09.825970",
+     "start_time": "2025-02-11T14:37:44.386146",
      "status": "completed"
     },
     "tags": []
@@ -513,79 +605,26 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 14,
-   "id": "68fa0926",
-   "metadata": {
-    "_cell_guid": "2660ca19-267f-4365-93b0-0dd4aa506ef0",
-    "_uuid": "56362b1d-8df7-4e9a-a14a-61e1e4e281cc",
-    "collapsed": false,
-    "execution": {
-     "iopub.execute_input": "2025-02-11T07:47:12.385043Z",
-     "iopub.status.busy": "2025-02-11T07:47:12.384660Z",
-     "iopub.status.idle": "2025-02-11T07:47:12.393451Z",
-     "shell.execute_reply": "2025-02-11T07:47:12.392126Z"
-    },
-    "jupyter": {
-     "outputs_hidden": false
-    },
-    "papermill": {
-     "duration": 0.018221,
-     "end_time": "2025-02-11T07:47:12.395986",
-     "exception": false,
-     "start_time": "2025-02-11T07:47:12.377765",
-     "status": "completed"
-    },
-    "tags": []
-   },
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "Index(['unique_id', 'date', 'warehouse', 'total_orders', 'sales',\n",
-       "       'sell_price_main', 'availability', 'type_0_discount', 'type_1_discount',\n",
-       "       'type_2_discount', 'type_3_discount', 'type_4_discount',\n",
-       "       'type_5_discount', 'type_6_discount', 'holiday_name', 'holiday',\n",
-       "       'shops_closed', 'winter_school_holidays', 'school_holidays', 'weight',\n",
-       "       'product_unique_id', 'name', 'day_of_week', 'month', 'Day_of_Month',\n",
-       "       'Week_of_Year', 'Date_Weekday', 'Date_Dayofyear', 'category',\n",
-       "       'product_sales_14', 'product_sales_16', 'product_sales_18',\n",
-       "       'product_sales_21', 'product_sales_30', 'product_sales_60',\n",
-       "       'product_sales_90', 'product_sales_120', 'product_sales_180',\n",
-       "       'product_sales_270', 'product_sales_350', 'product_sales_600'],\n",
-       "      dtype='object')"
-      ]
-     },
-     "execution_count": 14,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "train.columns"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 15,
-   "id": "a7a83048",
+   "execution_count": 17,
+   "id": "cc0e0bc2",
    "metadata": {
     "_cell_guid": "5c1a1e4b-b37a-4ccf-beac-f2003e7cd874",
     "_uuid": "71351c00-8faa-421c-ba90-f2ffa28e73f8",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:47:12.409380Z",
-     "iopub.status.busy": "2025-02-11T07:47:12.408987Z",
-     "iopub.status.idle": "2025-02-11T07:47:12.684835Z",
-     "shell.execute_reply": "2025-02-11T07:47:12.683581Z"
+     "iopub.execute_input": "2025-02-11T14:37:45.963144Z",
+     "iopub.status.busy": "2025-02-11T14:37:45.962769Z",
+     "iopub.status.idle": "2025-02-11T14:37:46.179379Z",
+     "shell.execute_reply": "2025-02-11T14:37:46.178242Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.285888,
-     "end_time": "2025-02-11T07:47:12.687826",
+     "duration": 0.223922,
+     "end_time": "2025-02-11T14:37:46.181379",
      "exception": false,
-     "start_time": "2025-02-11T07:47:12.401938",
+     "start_time": "2025-02-11T14:37:45.957457",
      "status": "completed"
     },
     "tags": []
@@ -593,41 +632,44 @@
    "outputs": [],
    "source": [
     "# Prepare data for LightGBM\n",
-    "features = ['total_orders', \n",
-    "       'sell_price_main', 'type_0_discount', \n",
-    "       'type_2_discount',\n",
-    "       'name', 'day_of_week', 'month', 'Day_of_Month',\n",
+    "features = ['warehouse', 'total_orders',\n",
+    "       'sell_price_main', 'type_0_discount',\n",
+    "       'type_2_discount', 'name', 'price_discount_interaction',\n",
+    "       'log_total_orders', 'log_total_orders_sq', 'log_total_orders_cube',\n",
+    "       'log_total_orders_discount', 'log_sell_price_main', 'log_sell_price_sq',\n",
+    "       'log_sell_price_cube', 'day_of_week', 'month', 'Day_of_Month',\n",
     "       'Week_of_Year', 'Date_Weekday', 'Date_Dayofyear', 'category',\n",
-    "       'product_sales_14', 'product_sales_16', 'product_sales_18',\n",
-    "       'product_sales_21', 'product_sales_30', 'product_sales_60',\n",
-    "       'product_sales_90', 'product_sales_120', 'product_sales_180',\n",
-    "       'product_sales_270', 'product_sales_350', 'product_sales_600']\n",
+    "       'product_sales_7', 'product_sales_14', 'product_sales_16',\n",
+    "       'product_sales_18', 'product_sales_21', 'product_sales_30',\n",
+    "       'product_sales_60', 'product_sales_90', 'product_sales_120',\n",
+    "       'product_sales_180', 'product_sales_270', 'product_sales_350',\n",
+    "       'product_sales_600', 'product_sales_1000']\n",
     "X = train[features]\n",
     "y = train['sales']"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 16,
-   "id": "dbf70aef",
+   "execution_count": 18,
+   "id": "e8790983",
    "metadata": {
     "_cell_guid": "b4071951-c44a-4aea-ab14-a5921442c8fa",
     "_uuid": "b557ee69-cc99-48cb-bed9-dfe9a9236ad8",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:47:12.702033Z",
-     "iopub.status.busy": "2025-02-11T07:47:12.701632Z",
-     "iopub.status.idle": "2025-02-11T07:47:14.131821Z",
-     "shell.execute_reply": "2025-02-11T07:47:14.129908Z"
+     "iopub.execute_input": "2025-02-11T14:37:46.191099Z",
+     "iopub.status.busy": "2025-02-11T14:37:46.190767Z",
+     "iopub.status.idle": "2025-02-11T14:37:47.516037Z",
+     "shell.execute_reply": "2025-02-11T14:37:47.514789Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 1.44155,
-     "end_time": "2025-02-11T07:47:14.135742",
+     "duration": 1.332401,
+     "end_time": "2025-02-11T14:37:47.518135",
      "exception": false,
-     "start_time": "2025-02-11T07:47:12.694192",
+     "start_time": "2025-02-11T14:37:46.185734",
      "status": "completed"
     },
     "tags": []
@@ -648,26 +690,26 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 17,
-   "id": "0f1e42ed",
+   "execution_count": 19,
+   "id": "1f728697",
    "metadata": {
     "_cell_guid": "3d4b1d44-dac1-4da7-91c7-e16823d18069",
     "_uuid": "0990842f-6819-4241-8518-c8c30c4311f4",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T07:47:14.150871Z",
-     "iopub.status.busy": "2025-02-11T07:47:14.149965Z",
-     "iopub.status.idle": "2025-02-11T08:00:10.047880Z",
-     "shell.execute_reply": "2025-02-11T08:00:10.046719Z"
+     "iopub.execute_input": "2025-02-11T14:37:47.527818Z",
+     "iopub.status.busy": "2025-02-11T14:37:47.527526Z",
+     "iopub.status.idle": "2025-02-11T14:49:25.382210Z",
+     "shell.execute_reply": "2025-02-11T14:49:25.381333Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 775.914207,
-     "end_time": "2025-02-11T08:00:10.056249",
+     "duration": 697.865752,
+     "end_time": "2025-02-11T14:49:25.388292",
      "exception": false,
-     "start_time": "2025-02-11T07:47:14.142042",
+     "start_time": "2025-02-11T14:37:47.522540",
      "status": "completed"
     },
     "tags": []
@@ -688,10 +730,11 @@
       "[LightGBM] [Warning] num_iterations is set=4900, num_boost_round=4900 will be ignored. Current value: num_iterations=4900\n",
       "[LightGBM] [Warning] Categorical features with more bins than the configured maximum bin number found.\n",
       "[LightGBM] [Warning] For categorical features, max_bin and max_bin_by_feature may be ignored with a large number of categories.\n",
-      "[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.496046 seconds.\n",
-      "You can set `force_col_wise=true` to remove the overhead.\n",
-      "[LightGBM] [Info] Total Bins 6039\n",
-      "[LightGBM] [Info] Number of data points in the train set: 3005565, number of used features: 24\n",
+      "[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.190829 seconds.\n",
+      "You can set `force_row_wise=true` to remove the overhead.\n",
+      "And if memory is not enough, you can set `force_col_wise=true`.\n",
+      "[LightGBM] [Info] Total Bins 8597\n",
+      "[LightGBM] [Info] Number of data points in the train set: 3005565, number of used features: 35\n",
       "[LightGBM] [Info] Start training from score 112.953860\n"
      ]
     },
@@ -701,22 +744,22 @@
        "<style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: \"▸\";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: \"▾\";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: \"\";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: \"\";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: \"\";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id=\"sk-container-id-1\" class=\"sk-top-container\"><div class=\"sk-text-repr-fallback\"><pre>LGBMRegressor(colsample_bytree=0.8528497905459008,\n",
        "              learning_rate=0.021796506746095973, max_depth=10, metric=&#x27;mae&#x27;,\n",
        "              min_child_samples=25, num_boost_round=4900, num_leaves=70,\n",
-       "              objective=&#x27;regression&#x27;, reg_alpha=0.036786449788597686,\n",
-       "              reg_lambda=0.3151110021900479, subsample=0.7057135664023435)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class=\"sk-container\" hidden><div class=\"sk-item\"><div class=\"sk-estimator sk-toggleable\"><input class=\"sk-toggleable__control sk-hidden--visually\" id=\"sk-estimator-id-1\" type=\"checkbox\" checked><label for=\"sk-estimator-id-1\" class=\"sk-toggleable__label sk-toggleable__label-arrow\">LGBMRegressor</label><div class=\"sk-toggleable__content\"><pre>LGBMRegressor(colsample_bytree=0.8528497905459008,\n",
+       "              objective=&#x27;regression&#x27;, reg_alpha=0.03, reg_lambda=0.1,\n",
+       "              subsample=0.7057135664023435)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class=\"sk-container\" hidden><div class=\"sk-item\"><div class=\"sk-estimator sk-toggleable\"><input class=\"sk-toggleable__control sk-hidden--visually\" id=\"sk-estimator-id-1\" type=\"checkbox\" checked><label for=\"sk-estimator-id-1\" class=\"sk-toggleable__label sk-toggleable__label-arrow\">LGBMRegressor</label><div class=\"sk-toggleable__content\"><pre>LGBMRegressor(colsample_bytree=0.8528497905459008,\n",
        "              learning_rate=0.021796506746095973, max_depth=10, metric=&#x27;mae&#x27;,\n",
        "              min_child_samples=25, num_boost_round=4900, num_leaves=70,\n",
-       "              objective=&#x27;regression&#x27;, reg_alpha=0.036786449788597686,\n",
-       "              reg_lambda=0.3151110021900479, subsample=0.7057135664023435)</pre></div></div></div></div></div>"
+       "              objective=&#x27;regression&#x27;, reg_alpha=0.03, reg_lambda=0.1,\n",
+       "              subsample=0.7057135664023435)</pre></div></div></div></div></div>"
       ],
       "text/plain": [
        "LGBMRegressor(colsample_bytree=0.8528497905459008,\n",
        "              learning_rate=0.021796506746095973, max_depth=10, metric='mae',\n",
        "              min_child_samples=25, num_boost_round=4900, num_leaves=70,\n",
-       "              objective='regression', reg_alpha=0.036786449788597686,\n",
-       "              reg_lambda=0.3151110021900479, subsample=0.7057135664023435)"
+       "              objective='regression', reg_alpha=0.03, reg_lambda=0.1,\n",
+       "              subsample=0.7057135664023435)"
       ]
      },
-     "execution_count": 17,
+     "execution_count": 19,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -730,8 +773,8 @@
     "    'min_child_samples': 25,\n",
     "    'subsample': 0.7057135664023435,\n",
     "    'colsample_bytree': 0.8528497905459008,\n",
-    "    'reg_alpha': 0.036786449788597686,\n",
-    "    'reg_lambda': 0.3151110021900479,\n",
+    "    'reg_alpha': 0.03,\n",
+    "    'reg_lambda': 0.1,\n",
     "    'num_boost_round': 4900,\n",
     "    'objective': 'regression',\n",
     "    'metric': 'mae',\n",
@@ -745,26 +788,26 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 18,
-   "id": "cd6717a5",
+   "execution_count": 20,
+   "id": "2aabc838",
    "metadata": {
     "_cell_guid": "6fc9b68e-cae2-4ee7-80c9-8ffa16c80ab7",
     "_uuid": "7b1858ca-daf7-46e7-90c7-e6b8aee67eca",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T08:00:10.070471Z",
-     "iopub.status.busy": "2025-02-11T08:00:10.070050Z",
-     "iopub.status.idle": "2025-02-11T09:46:07.919475Z",
-     "shell.execute_reply": "2025-02-11T09:46:07.918126Z"
+     "iopub.execute_input": "2025-02-11T14:49:25.398462Z",
+     "iopub.status.busy": "2025-02-11T14:49:25.398132Z",
+     "iopub.status.idle": "2025-02-11T15:39:14.946787Z",
+     "shell.execute_reply": "2025-02-11T15:39:14.945844Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 6357.866455,
-     "end_time": "2025-02-11T09:46:07.928898",
+     "duration": 2989.559784,
+     "end_time": "2025-02-11T15:39:14.952480",
      "exception": false,
-     "start_time": "2025-02-11T08:00:10.062443",
+     "start_time": "2025-02-11T14:49:25.392696",
      "status": "completed"
     },
     "tags": []
@@ -774,8 +817,8 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Training WMAE: 17.38474664494209\n",
-      "Validation WMAE: 28.839424109626194\n"
+      "Training WMAE: 16.957363744796357\n",
+      "Validation WMAE: 28.357343772817977\n"
      ]
     }
    ],
@@ -793,26 +836,26 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 19,
-   "id": "7a4b1d67",
+   "execution_count": 21,
+   "id": "2f254001",
    "metadata": {
     "_cell_guid": "86bbea9c-d45c-4ef4-a041-e6219bdfa098",
     "_uuid": "ad7dbe66-69b6-49da-a4ff-cd2fe6b58f1f",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T09:46:07.943810Z",
-     "iopub.status.busy": "2025-02-11T09:46:07.943399Z",
-     "iopub.status.idle": "2025-02-11T09:46:07.990922Z",
-     "shell.execute_reply": "2025-02-11T09:46:07.989945Z"
+     "iopub.execute_input": "2025-02-11T15:39:14.964687Z",
+     "iopub.status.busy": "2025-02-11T15:39:14.962621Z",
+     "iopub.status.idle": "2025-02-11T15:39:14.992041Z",
+     "shell.execute_reply": "2025-02-11T15:39:14.991204Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.05807,
-     "end_time": "2025-02-11T09:46:07.993478",
+     "duration": 0.036907,
+     "end_time": "2025-02-11T15:39:14.993901",
      "exception": false,
-     "start_time": "2025-02-11T09:46:07.935408",
+     "start_time": "2025-02-11T15:39:14.956994",
      "status": "completed"
     },
     "tags": []
@@ -825,20 +868,20 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 20,
-   "id": "5a8a8a63",
+   "execution_count": 22,
+   "id": "ce0f7efe",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-02-11T09:46:08.009160Z",
-     "iopub.status.busy": "2025-02-11T09:46:08.008337Z",
-     "iopub.status.idle": "2025-02-11T09:46:09.973651Z",
-     "shell.execute_reply": "2025-02-11T09:46:09.972711Z"
+     "iopub.execute_input": "2025-02-11T15:39:15.005298Z",
+     "iopub.status.busy": "2025-02-11T15:39:15.004966Z",
+     "iopub.status.idle": "2025-02-11T15:39:16.094808Z",
+     "shell.execute_reply": "2025-02-11T15:39:16.093653Z"
     },
     "papermill": {
-     "duration": 1.975736,
-     "end_time": "2025-02-11T09:46:09.976047",
+     "duration": 1.098108,
+     "end_time": "2025-02-11T15:39:16.096859",
      "exception": false,
-     "start_time": "2025-02-11T09:46:08.000311",
+     "start_time": "2025-02-11T15:39:14.998751",
      "status": "completed"
     },
     "tags": []
@@ -848,6 +891,10 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
+      "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
+      "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
       "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
       "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
@@ -885,26 +932,26 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 21,
-   "id": "0d8e1171",
+   "execution_count": 23,
+   "id": "c3c89e9a",
    "metadata": {
     "_cell_guid": "c8efc739-bc8c-430e-970f-e61bc8b931bf",
     "_uuid": "1194d812-9214-47f4-ab47-02a6f326350a",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T09:46:09.991597Z",
-     "iopub.status.busy": "2025-02-11T09:46:09.991200Z",
-     "iopub.status.idle": "2025-02-11T09:46:10.011221Z",
-     "shell.execute_reply": "2025-02-11T09:46:10.010113Z"
+     "iopub.execute_input": "2025-02-11T15:39:16.109007Z",
+     "iopub.status.busy": "2025-02-11T15:39:16.108677Z",
+     "iopub.status.idle": "2025-02-11T15:39:16.124208Z",
+     "shell.execute_reply": "2025-02-11T15:39:16.123234Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.030429,
-     "end_time": "2025-02-11T09:46:10.013473",
+     "duration": 0.023762,
+     "end_time": "2025-02-11T15:39:16.125889",
      "exception": false,
-     "start_time": "2025-02-11T09:46:09.983044",
+     "start_time": "2025-02-11T15:39:16.102127",
      "status": "completed"
     },
     "tags": []
@@ -925,20 +972,20 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 22,
-   "id": "88b26111",
+   "execution_count": 24,
+   "id": "41a0958b",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-02-11T09:46:10.029223Z",
-     "iopub.status.busy": "2025-02-11T09:46:10.028768Z",
-     "iopub.status.idle": "2025-02-11T09:46:10.049091Z",
-     "shell.execute_reply": "2025-02-11T09:46:10.048014Z"
+     "iopub.execute_input": "2025-02-11T15:39:16.137416Z",
+     "iopub.status.busy": "2025-02-11T15:39:16.137067Z",
+     "iopub.status.idle": "2025-02-11T15:39:16.154216Z",
+     "shell.execute_reply": "2025-02-11T15:39:16.153205Z"
     },
     "papermill": {
-     "duration": 0.0312,
-     "end_time": "2025-02-11T09:46:10.051815",
+     "duration": 0.025141,
+     "end_time": "2025-02-11T15:39:16.156251",
      "exception": false,
-     "start_time": "2025-02-11T09:46:10.020615",
+     "start_time": "2025-02-11T15:39:16.131110",
      "status": "completed"
     },
     "tags": []
@@ -946,7 +993,7 @@
    "outputs": [],
    "source": [
     "# Align categorical features between train and test\n",
-    "categorical_features = ['name', 'category']  # Add other categorical columns here\n",
+    "categorical_features = ['warehouse', 'name', 'category']  # Add other categorical columns here\n",
     "\n",
     "for col in categorical_features:\n",
     "    # Get unique categories from the training set\n",
@@ -961,26 +1008,26 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 23,
-   "id": "f4e5a779",
+   "execution_count": 25,
+   "id": "8765de47",
    "metadata": {
     "_cell_guid": "f8cd7ae4-b459-47bb-8429-74b7f77727a4",
     "_uuid": "1a27e5a1-4c11-4473-92db-ae329f4a2371",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T09:46:10.067677Z",
-     "iopub.status.busy": "2025-02-11T09:46:10.067273Z",
-     "iopub.status.idle": "2025-02-11T09:47:23.017692Z",
-     "shell.execute_reply": "2025-02-11T09:47:23.016555Z"
+     "iopub.execute_input": "2025-02-11T15:39:16.167982Z",
+     "iopub.status.busy": "2025-02-11T15:39:16.167658Z",
+     "iopub.status.idle": "2025-02-11T15:39:48.001667Z",
+     "shell.execute_reply": "2025-02-11T15:39:48.000035Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 72.961254,
-     "end_time": "2025-02-11T09:47:23.020269",
+     "duration": 31.84213,
+     "end_time": "2025-02-11T15:39:48.003900",
      "exception": false,
-     "start_time": "2025-02-11T09:46:10.059015",
+     "start_time": "2025-02-11T15:39:16.161770",
      "status": "completed"
     },
     "tags": []
@@ -996,26 +1043,26 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 24,
-   "id": "5cb21578",
+   "execution_count": 26,
+   "id": "bb84dc64",
    "metadata": {
     "_cell_guid": "00b8ab33-d2bc-46a3-ad24-1d60cf59d6c2",
     "_uuid": "496af11a-2df6-4c0b-b4ee-5732a9592901",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-11T09:47:23.036463Z",
-     "iopub.status.busy": "2025-02-11T09:47:23.036039Z",
-     "iopub.status.idle": "2025-02-11T09:47:23.210391Z",
-     "shell.execute_reply": "2025-02-11T09:47:23.209350Z"
+     "iopub.execute_input": "2025-02-11T15:39:48.015732Z",
+     "iopub.status.busy": "2025-02-11T15:39:48.015349Z",
+     "iopub.status.idle": "2025-02-11T15:39:48.128986Z",
+     "shell.execute_reply": "2025-02-11T15:39:48.127712Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.185289,
-     "end_time": "2025-02-11T09:47:23.212875",
+     "duration": 0.121766,
+     "end_time": "2025-02-11T15:39:48.131043",
      "exception": false,
-     "start_time": "2025-02-11T09:47:23.027586",
+     "start_time": "2025-02-11T15:39:48.009277",
      "status": "completed"
     },
     "tags": []
@@ -1030,6 +1077,23 @@
     "submission = test[['id', 'sales_hat']]\n",
     "submission.to_csv('submission.csv', index=False)"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8e9a6fe7",
+   "metadata": {
+    "papermill": {
+     "duration": 0.004658,
+     "end_time": "2025-02-11T15:39:48.141179",
+     "exception": false,
+     "start_time": "2025-02-11T15:39:48.136521",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
@@ -1067,14 +1131,14 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 7255.499588,
-   "end_time": "2025-02-11T09:47:24.143508",
+   "duration": 3755.037788,
+   "end_time": "2025-02-11T15:39:49.068177",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2025-02-11T07:46:28.643920",
+   "start_time": "2025-02-11T14:37:14.030389",
    "version": "2.6.0"
   }
  },
