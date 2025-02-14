@@ -3,25 +3,25 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "6388ae8a",
+   "id": "ff3cf802",
    "metadata": {
     "_cell_guid": "e577a770-989f-4761-9d98-62667a359cfc",
     "_uuid": "160028f9-96a9-48fd-bebb-9f241ac514be",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:15.145331Z",
-     "iopub.status.busy": "2025-02-14T09:12:15.144885Z",
-     "iopub.status.idle": "2025-02-14T09:12:16.137752Z",
-     "shell.execute_reply": "2025-02-14T09:12:16.136577Z"
+     "iopub.execute_input": "2025-02-14T12:52:34.136332Z",
+     "iopub.status.busy": "2025-02-14T12:52:34.135797Z",
+     "iopub.status.idle": "2025-02-14T12:52:35.211243Z",
+     "shell.execute_reply": "2025-02-14T12:52:35.209634Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 1.004812,
-     "end_time": "2025-02-14T09:12:16.140214",
+     "duration": 1.089759,
+     "end_time": "2025-02-14T12:52:35.215282",
      "exception": false,
-     "start_time": "2025-02-14T09:12:15.135402",
+     "start_time": "2025-02-14T12:52:34.125523",
      "status": "completed"
     },
     "tags": []
@@ -63,25 +63,25 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "8a1546d1",
+   "id": "97802dd0",
    "metadata": {
     "_cell_guid": "7b6901b7-522f-4869-9af6-163b43e1d90f",
     "_uuid": "f5fe20a8-03ac-439d-80a8-69cbda70f76a",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:16.158835Z",
-     "iopub.status.busy": "2025-02-14T09:12:16.158328Z",
-     "iopub.status.idle": "2025-02-14T09:12:18.914271Z",
-     "shell.execute_reply": "2025-02-14T09:12:18.913017Z"
+     "iopub.execute_input": "2025-02-14T12:52:35.246317Z",
+     "iopub.status.busy": "2025-02-14T12:52:35.245369Z",
+     "iopub.status.idle": "2025-02-14T12:52:38.169541Z",
+     "shell.execute_reply": "2025-02-14T12:52:38.168183Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 2.768587,
-     "end_time": "2025-02-14T09:12:18.916880",
+     "duration": 2.944507,
+     "end_time": "2025-02-14T12:52:38.172091",
      "exception": false,
-     "start_time": "2025-02-14T09:12:16.148293",
+     "start_time": "2025-02-14T12:52:35.227584",
      "status": "completed"
     },
     "tags": []
@@ -96,25 +96,25 @@
   {
    "cell_type": "code",
    "execution_count": 3,
-   "id": "da311cb4",
+   "id": "0bb605be",
    "metadata": {
     "_cell_guid": "f351e0ba-8688-4199-82a8-e120aaefc838",
     "_uuid": "e09ca90f-38fe-4af3-8e42-2bf7fe796c75",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:18.933960Z",
-     "iopub.status.busy": "2025-02-14T09:12:18.933346Z",
-     "iopub.status.idle": "2025-02-14T09:12:28.125191Z",
-     "shell.execute_reply": "2025-02-14T09:12:28.124239Z"
+     "iopub.execute_input": "2025-02-14T12:52:38.191399Z",
+     "iopub.status.busy": "2025-02-14T12:52:38.190773Z",
+     "iopub.status.idle": "2025-02-14T12:52:46.627510Z",
+     "shell.execute_reply": "2025-02-14T12:52:46.626295Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 9.202964,
-     "end_time": "2025-02-14T09:12:28.127608",
+     "duration": 8.448947,
+     "end_time": "2025-02-14T12:52:46.630181",
      "exception": false,
-     "start_time": "2025-02-14T09:12:18.924644",
+     "start_time": "2025-02-14T12:52:38.181234",
      "status": "completed"
     },
     "tags": []
@@ -132,25 +132,25 @@
   {
    "cell_type": "code",
    "execution_count": 4,
-   "id": "e44efe54",
+   "id": "422fe795",
    "metadata": {
     "_cell_guid": "1a42d7a0-8a2f-4be8-9741-392e0d65931f",
     "_uuid": "3e4a92c7-3864-4123-9699-554bd4d38dec",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:28.144132Z",
-     "iopub.status.busy": "2025-02-14T09:12:28.143737Z",
-     "iopub.status.idle": "2025-02-14T09:12:31.609377Z",
-     "shell.execute_reply": "2025-02-14T09:12:31.608176Z"
+     "iopub.execute_input": "2025-02-14T12:52:46.647589Z",
+     "iopub.status.busy": "2025-02-14T12:52:46.647189Z",
+     "iopub.status.idle": "2025-02-14T12:52:50.177181Z",
+     "shell.execute_reply": "2025-02-14T12:52:50.175932Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 3.476806,
-     "end_time": "2025-02-14T09:12:31.612006",
+     "duration": 3.541678,
+     "end_time": "2025-02-14T12:52:50.179909",
      "exception": false,
-     "start_time": "2025-02-14T09:12:28.135200",
+     "start_time": "2025-02-14T12:52:46.638231",
      "status": "completed"
     },
     "tags": []
@@ -165,25 +165,25 @@
   {
    "cell_type": "code",
    "execution_count": 5,
-   "id": "a0e6b015",
+   "id": "768b141b",
    "metadata": {
     "_cell_guid": "d6a49f1f-8cac-44f0-b794-3aed7c58c8c8",
     "_uuid": "a37ee9c6-1f37-4f53-917d-dab066321e17",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:31.628933Z",
-     "iopub.status.busy": "2025-02-14T09:12:31.628536Z",
-     "iopub.status.idle": "2025-02-14T09:12:31.643630Z",
-     "shell.execute_reply": "2025-02-14T09:12:31.642468Z"
+     "iopub.execute_input": "2025-02-14T12:52:50.197459Z",
+     "iopub.status.busy": "2025-02-14T12:52:50.197047Z",
+     "iopub.status.idle": "2025-02-14T12:52:50.212573Z",
+     "shell.execute_reply": "2025-02-14T12:52:50.211304Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.026564,
-     "end_time": "2025-02-14T09:12:31.646253",
+     "duration": 0.027101,
+     "end_time": "2025-02-14T12:52:50.215259",
      "exception": false,
-     "start_time": "2025-02-14T09:12:31.619689",
+     "start_time": "2025-02-14T12:52:50.188158",
      "status": "completed"
     },
     "tags": []
@@ -196,25 +196,25 @@
   {
    "cell_type": "code",
    "execution_count": 6,
-   "id": "8aa3ac32",
+   "id": "dadc0a9f",
    "metadata": {
     "_cell_guid": "2e195674-2750-4caa-9597-95174b367098",
     "_uuid": "cab6acd0-c348-40ba-9ea6-67e0125b4839",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:31.662716Z",
-     "iopub.status.busy": "2025-02-14T09:12:31.662231Z",
-     "iopub.status.idle": "2025-02-14T09:12:32.427617Z",
-     "shell.execute_reply": "2025-02-14T09:12:32.426662Z"
+     "iopub.execute_input": "2025-02-14T12:52:50.232403Z",
+     "iopub.status.busy": "2025-02-14T12:52:50.232015Z",
+     "iopub.status.idle": "2025-02-14T12:52:51.021004Z",
+     "shell.execute_reply": "2025-02-14T12:52:51.019886Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.776312,
-     "end_time": "2025-02-14T09:12:32.429996",
+     "duration": 0.800793,
+     "end_time": "2025-02-14T12:52:51.023673",
      "exception": false,
-     "start_time": "2025-02-14T09:12:31.653684",
+     "start_time": "2025-02-14T12:52:50.222880",
      "status": "completed"
     },
     "tags": []
@@ -229,25 +229,25 @@
   {
    "cell_type": "code",
    "execution_count": 7,
-   "id": "5ac12323",
+   "id": "ffd9eb56",
    "metadata": {
     "_cell_guid": "361b48e3-e59e-4eaf-b1ef-225c0adc7b03",
     "_uuid": "bd6b2e6e-d1cf-4ef5-b5e9-2261de0fcf89",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:32.447201Z",
-     "iopub.status.busy": "2025-02-14T09:12:32.446184Z",
-     "iopub.status.idle": "2025-02-14T09:12:32.452363Z",
-     "shell.execute_reply": "2025-02-14T09:12:32.451228Z"
+     "iopub.execute_input": "2025-02-14T12:52:51.040408Z",
+     "iopub.status.busy": "2025-02-14T12:52:51.039845Z",
+     "iopub.status.idle": "2025-02-14T12:52:51.046449Z",
+     "shell.execute_reply": "2025-02-14T12:52:51.045288Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.01692,
-     "end_time": "2025-02-14T09:12:32.454477",
+     "duration": 0.017527,
+     "end_time": "2025-02-14T12:52:51.048739",
      "exception": false,
-     "start_time": "2025-02-14T09:12:32.437557",
+     "start_time": "2025-02-14T12:52:51.031212",
      "status": "completed"
     },
     "tags": []
@@ -267,25 +267,25 @@
   {
    "cell_type": "code",
    "execution_count": 8,
-   "id": "d6c110e8",
+   "id": "6c06e47e",
    "metadata": {
     "_cell_guid": "cbd99e6d-2bd6-4f7b-bcb9-907fe6f746e7",
     "_uuid": "35efa1c0-753b-43ce-8fd1-a8c806d99eb8",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:32.470995Z",
-     "iopub.status.busy": "2025-02-14T09:12:32.470588Z",
-     "iopub.status.idle": "2025-02-14T09:12:32.475588Z",
-     "shell.execute_reply": "2025-02-14T09:12:32.474640Z"
+     "iopub.execute_input": "2025-02-14T12:52:51.066523Z",
+     "iopub.status.busy": "2025-02-14T12:52:51.065768Z",
+     "iopub.status.idle": "2025-02-14T12:52:51.071338Z",
+     "shell.execute_reply": "2025-02-14T12:52:51.069906Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.015724,
-     "end_time": "2025-02-14T09:12:32.477637",
+     "duration": 0.017441,
+     "end_time": "2025-02-14T12:52:51.074139",
      "exception": false,
-     "start_time": "2025-02-14T09:12:32.461913",
+     "start_time": "2025-02-14T12:52:51.056698",
      "status": "completed"
     },
     "tags": []
@@ -300,25 +300,25 @@
   {
    "cell_type": "code",
    "execution_count": 9,
-   "id": "e044f642",
+   "id": "c6ceb5a0",
    "metadata": {
     "_cell_guid": "b020d1fd-d429-4b1e-8985-ad3b0793dfcc",
     "_uuid": "3f00ecd3-3cd5-42d0-b953-4479d785740a",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:32.494352Z",
-     "iopub.status.busy": "2025-02-14T09:12:32.493950Z",
-     "iopub.status.idle": "2025-02-14T09:12:32.517496Z",
-     "shell.execute_reply": "2025-02-14T09:12:32.515997Z"
+     "iopub.execute_input": "2025-02-14T12:52:51.091963Z",
+     "iopub.status.busy": "2025-02-14T12:52:51.091120Z",
+     "iopub.status.idle": "2025-02-14T12:52:51.116260Z",
+     "shell.execute_reply": "2025-02-14T12:52:51.115128Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.035148,
-     "end_time": "2025-02-14T09:12:32.520132",
+     "duration": 0.037102,
+     "end_time": "2025-02-14T12:52:51.118631",
      "exception": false,
-     "start_time": "2025-02-14T09:12:32.484984",
+     "start_time": "2025-02-14T12:52:51.081529",
      "status": "completed"
     },
     "tags": []
@@ -332,32 +332,32 @@
   {
    "cell_type": "code",
    "execution_count": 10,
-   "id": "3ee15af8",
+   "id": "e81f077f",
    "metadata": {
     "_cell_guid": "6df0d32e-ca71-41d4-a74d-2c680788c452",
     "_uuid": "ff14ca18-3541-4e0f-9ff4-3e438c93f21e",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:32.536658Z",
-     "iopub.status.busy": "2025-02-14T09:12:32.536235Z",
-     "iopub.status.idle": "2025-02-14T09:12:32.542775Z",
-     "shell.execute_reply": "2025-02-14T09:12:32.541669Z"
+     "iopub.execute_input": "2025-02-14T12:52:51.138721Z",
+     "iopub.status.busy": "2025-02-14T12:52:51.138347Z",
+     "iopub.status.idle": "2025-02-14T12:52:51.145516Z",
+     "shell.execute_reply": "2025-02-14T12:52:51.144338Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.017614,
-     "end_time": "2025-02-14T09:12:32.545059",
+     "duration": 0.020284,
+     "end_time": "2025-02-14T12:52:51.147968",
      "exception": false,
-     "start_time": "2025-02-14T09:12:32.527445",
+     "start_time": "2025-02-14T12:52:51.127684",
      "status": "completed"
     },
     "tags": []
    },
    "outputs": [],
    "source": [
-    "PERIODS = [7, 14, 16, 18, 21, 30, 60, 90, 120, 180, 270, 350, 600, 1000]\n",
+    "PERIODS = [14, 16, 18, 21, 30, 60, 90, 120, 180, 270, 350, 600, 1000]\n",
     "\n",
     "def lagged_product_sales(df):\n",
     "    if 'sales' in df.columns:  # Check if 'sales' column exists\n",
@@ -373,25 +373,25 @@
   {
    "cell_type": "code",
    "execution_count": 11,
-   "id": "36ae92a1",
+   "id": "8eec4776",
    "metadata": {
     "_cell_guid": "e298f401-284d-4a65-8a42-3dab14e9f99d",
     "_uuid": "beaf687c-e814-4354-8fa7-cccbe3a851cc",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:32.561380Z",
-     "iopub.status.busy": "2025-02-14T09:12:32.560966Z",
-     "iopub.status.idle": "2025-02-14T09:12:33.016124Z",
-     "shell.execute_reply": "2025-02-14T09:12:33.014876Z"
+     "iopub.execute_input": "2025-02-14T12:52:51.166565Z",
+     "iopub.status.busy": "2025-02-14T12:52:51.166186Z",
+     "iopub.status.idle": "2025-02-14T12:52:51.642156Z",
+     "shell.execute_reply": "2025-02-14T12:52:51.641041Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.466531,
-     "end_time": "2025-02-14T09:12:33.018854",
+     "duration": 0.489288,
+     "end_time": "2025-02-14T12:52:51.644808",
      "exception": false,
-     "start_time": "2025-02-14T09:12:32.552323",
+     "start_time": "2025-02-14T12:52:51.155520",
      "status": "completed"
     },
     "tags": []
@@ -413,25 +413,25 @@
   {
    "cell_type": "code",
    "execution_count": 12,
-   "id": "de354858",
+   "id": "871c4d3e",
    "metadata": {
     "_cell_guid": "d89a29ca-f404-4972-9d73-cbd0385fa425",
     "_uuid": "2c78b52f-42c8-4eec-9760-12e29bdf1ffa",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:33.035502Z",
-     "iopub.status.busy": "2025-02-14T09:12:33.035027Z",
-     "iopub.status.idle": "2025-02-14T09:12:33.066198Z",
-     "shell.execute_reply": "2025-02-14T09:12:33.064659Z"
+     "iopub.execute_input": "2025-02-14T12:52:51.662624Z",
+     "iopub.status.busy": "2025-02-14T12:52:51.662265Z",
+     "iopub.status.idle": "2025-02-14T12:52:51.693610Z",
+     "shell.execute_reply": "2025-02-14T12:52:51.692226Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.042232,
-     "end_time": "2025-02-14T09:12:33.068682",
+     "duration": 0.043223,
+     "end_time": "2025-02-14T12:52:51.696362",
      "exception": false,
-     "start_time": "2025-02-14T09:12:33.026450",
+     "start_time": "2025-02-14T12:52:51.653139",
      "status": "completed"
     },
     "tags": []
@@ -445,25 +445,25 @@
   {
    "cell_type": "code",
    "execution_count": 13,
-   "id": "cb01f40f",
+   "id": "8c1a09c6",
    "metadata": {
     "_cell_guid": "6318eb08-897d-4e51-b91c-b70e2e9e4315",
     "_uuid": "682d4cbf-3e19-4380-9b4f-6efbbaa87954",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:33.085307Z",
-     "iopub.status.busy": "2025-02-14T09:12:33.084860Z",
-     "iopub.status.idle": "2025-02-14T09:12:33.305081Z",
-     "shell.execute_reply": "2025-02-14T09:12:33.303906Z"
+     "iopub.execute_input": "2025-02-14T12:52:51.713290Z",
+     "iopub.status.busy": "2025-02-14T12:52:51.712922Z",
+     "iopub.status.idle": "2025-02-14T12:52:52.043524Z",
+     "shell.execute_reply": "2025-02-14T12:52:52.042295Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.231662,
-     "end_time": "2025-02-14T09:12:33.307881",
+     "duration": 0.341965,
+     "end_time": "2025-02-14T12:52:52.045993",
      "exception": false,
-     "start_time": "2025-02-14T09:12:33.076219",
+     "start_time": "2025-02-14T12:52:51.704028",
      "status": "completed"
     },
     "tags": []
@@ -474,7 +474,7 @@
     "train['log_sell_price_main'] = np.log1p(train['sell_price_main'])\n",
     "test['log_sell_price_main'] = np.log1p(test['sell_price_main'])\n",
     "\n",
-    "for power in [2, 3]:\n",
+    "for power in [2, 3, 4]:\n",
     "    train[f'log_sell_price_{power}'] = train['log_sell_price_main'] ** power\n",
     "    test[f'log_sell_price_{power}'] = test['log_sell_price_main'] ** power"
    ]
@@ -482,25 +482,25 @@
   {
    "cell_type": "code",
    "execution_count": 14,
-   "id": "c997c2eb",
+   "id": "ee2d23e5",
    "metadata": {
     "_cell_guid": "24df2479-b9b5-4d87-a417-d8c7c17c35b8",
     "_uuid": "bdd3590b-f0f3-4143-b231-ac6c236f65e5",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:33.325697Z",
-     "iopub.status.busy": "2025-02-14T09:12:33.325300Z",
-     "iopub.status.idle": "2025-02-14T09:12:33.528853Z",
-     "shell.execute_reply": "2025-02-14T09:12:33.527692Z"
+     "iopub.execute_input": "2025-02-14T12:52:52.062774Z",
+     "iopub.status.busy": "2025-02-14T12:52:52.062046Z",
+     "iopub.status.idle": "2025-02-14T12:52:52.269000Z",
+     "shell.execute_reply": "2025-02-14T12:52:52.267544Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.215365,
-     "end_time": "2025-02-14T09:12:33.531824",
+     "duration": 0.218266,
+     "end_time": "2025-02-14T12:52:52.271618",
      "exception": false,
-     "start_time": "2025-02-14T09:12:33.316459",
+     "start_time": "2025-02-14T12:52:52.053352",
      "status": "completed"
     },
     "tags": []
@@ -515,25 +515,25 @@
   {
    "cell_type": "code",
    "execution_count": 15,
-   "id": "f5b45859",
+   "id": "97ca4608",
    "metadata": {
     "_cell_guid": "058b7890-0f08-40e6-beb7-edd16eeae15a",
     "_uuid": "b6644cd5-3a51-459e-a027-b89c7b5c239f",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:33.549312Z",
-     "iopub.status.busy": "2025-02-14T09:12:33.548537Z",
-     "iopub.status.idle": "2025-02-14T09:12:33.580841Z",
-     "shell.execute_reply": "2025-02-14T09:12:33.579310Z"
+     "iopub.execute_input": "2025-02-14T12:52:52.290138Z",
+     "iopub.status.busy": "2025-02-14T12:52:52.289233Z",
+     "iopub.status.idle": "2025-02-14T12:52:52.319847Z",
+     "shell.execute_reply": "2025-02-14T12:52:52.318429Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.043769,
-     "end_time": "2025-02-14T09:12:33.583369",
+     "duration": 0.042816,
+     "end_time": "2025-02-14T12:52:52.322625",
      "exception": false,
-     "start_time": "2025-02-14T09:12:33.539600",
+     "start_time": "2025-02-14T12:52:52.279809",
      "status": "completed"
     },
     "tags": []
@@ -547,25 +547,25 @@
   {
    "cell_type": "code",
    "execution_count": 16,
-   "id": "23f6b1d6",
+   "id": "ad0e9702",
    "metadata": {
     "_cell_guid": "f283c004-5959-4f29-a5ba-769d830ac804",
     "_uuid": "1f6ae36c-b65b-4acd-88ef-b1775b9adc28",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:33.600009Z",
-     "iopub.status.busy": "2025-02-14T09:12:33.599579Z",
-     "iopub.status.idle": "2025-02-14T09:12:33.607382Z",
-     "shell.execute_reply": "2025-02-14T09:12:33.606228Z"
+     "iopub.execute_input": "2025-02-14T12:52:52.340393Z",
+     "iopub.status.busy": "2025-02-14T12:52:52.340030Z",
+     "iopub.status.idle": "2025-02-14T12:52:52.348689Z",
+     "shell.execute_reply": "2025-02-14T12:52:52.347421Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.018731,
-     "end_time": "2025-02-14T09:12:33.609495",
+     "duration": 0.020159,
+     "end_time": "2025-02-14T12:52:52.351105",
      "exception": false,
-     "start_time": "2025-02-14T09:12:33.590764",
+     "start_time": "2025-02-14T12:52:52.330946",
      "status": "completed"
     },
     "tags": []
@@ -575,7 +575,7 @@
     "# Define periods for rolling features\n",
     "def add_rolling_features(df):\n",
     "    if 'sales' in df.columns:  # Check if 'sales' column exists\n",
-    "        for window in [7, 14, 16, 18, 21, 30, 60, 90, 120, 180, 270, 350, 600, 1000]:\n",
+    "        for window in [14, 16, 18, 21, 30, 60, 90, 120, 180, 270, 350, 600, 1000]:\n",
     "            df[f'rolling_mean_{window}'] = df.groupby(['warehouse', 'name'])['sales'].transform(\n",
     "                lambda x: x.shift(1).rolling(window=window, min_periods=1).mean()\n",
     "            )\n",
@@ -584,7 +584,7 @@
     "            )\n",
     "    else:\n",
     "        # If 'sales' column is missing, initialize rolling features with NaN\n",
-    "        for window in [7, 14, 16, 18, 21, 30, 60, 90, 120, 180, 270, 350, 600, 1000]:\n",
+    "        for window in [14, 16, 18, 21, 30, 60, 90, 120, 180, 270, 350, 600, 1000]:\n",
     "            df[f'rolling_mean_{window}'] = np.nan\n",
     "            df[f'rolling_std_{window}'] = np.nan\n",
     "    return df"
@@ -593,25 +593,25 @@
   {
    "cell_type": "code",
    "execution_count": 17,
-   "id": "eab5f53c",
+   "id": "78f30b49",
    "metadata": {
     "_cell_guid": "8473f4ac-74e1-4be5-8b2a-cb82a7134be3",
     "_uuid": "7ee707bc-a26d-42e4-9197-b74c90459f79",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:12:33.626676Z",
-     "iopub.status.busy": "2025-02-14T09:12:33.626276Z",
-     "iopub.status.idle": "2025-02-14T09:14:29.685731Z",
-     "shell.execute_reply": "2025-02-14T09:14:29.684466Z"
+     "iopub.execute_input": "2025-02-14T12:52:52.368487Z",
+     "iopub.status.busy": "2025-02-14T12:52:52.367667Z",
+     "iopub.status.idle": "2025-02-14T12:54:42.085088Z",
+     "shell.execute_reply": "2025-02-14T12:54:42.083527Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 116.071803,
-     "end_time": "2025-02-14T09:14:29.688640",
+     "duration": 109.72944,
+     "end_time": "2025-02-14T12:54:42.088014",
      "exception": false,
-     "start_time": "2025-02-14T09:12:33.616837",
+     "start_time": "2025-02-14T12:52:52.358574",
      "status": "completed"
     },
     "tags": []
@@ -627,25 +627,25 @@
   {
    "cell_type": "code",
    "execution_count": 18,
-   "id": "ec4e2f7c",
+   "id": "887030dd",
    "metadata": {
     "_cell_guid": "f52edbdd-a1ba-47dc-bae3-f8eb30899c33",
     "_uuid": "e0830237-acfc-4cb0-a32d-f5dcf308a231",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:14:29.707399Z",
-     "iopub.status.busy": "2025-02-14T09:14:29.706991Z",
-     "iopub.status.idle": "2025-02-14T09:14:32.646978Z",
-     "shell.execute_reply": "2025-02-14T09:14:32.645588Z"
+     "iopub.execute_input": "2025-02-14T12:54:42.105044Z",
+     "iopub.status.busy": "2025-02-14T12:54:42.104629Z",
+     "iopub.status.idle": "2025-02-14T12:54:44.943368Z",
+     "shell.execute_reply": "2025-02-14T12:54:44.942143Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 2.952084,
-     "end_time": "2025-02-14T09:14:32.650209",
+     "duration": 2.850341,
+     "end_time": "2025-02-14T12:54:44.946085",
      "exception": false,
-     "start_time": "2025-02-14T09:14:29.698125",
+     "start_time": "2025-02-14T12:54:42.095744",
      "status": "completed"
     },
     "tags": []
@@ -668,25 +668,25 @@
   {
    "cell_type": "code",
    "execution_count": 19,
-   "id": "fd46fe01",
+   "id": "c8b72b04",
    "metadata": {
     "_cell_guid": "f9c99d5a-2a52-40bd-9b77-3a6853ca7afd",
     "_uuid": "22b63766-2535-47be-99cd-f9135a9a1ddf",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:14:32.672683Z",
-     "iopub.status.busy": "2025-02-14T09:14:32.672179Z",
-     "iopub.status.idle": "2025-02-14T09:14:36.603973Z",
-     "shell.execute_reply": "2025-02-14T09:14:36.602250Z"
+     "iopub.execute_input": "2025-02-14T12:54:44.963281Z",
+     "iopub.status.busy": "2025-02-14T12:54:44.962679Z",
+     "iopub.status.idle": "2025-02-14T12:54:48.766111Z",
+     "shell.execute_reply": "2025-02-14T12:54:48.764963Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 3.943804,
-     "end_time": "2025-02-14T09:14:36.606759",
+     "duration": 3.815043,
+     "end_time": "2025-02-14T12:54:48.768722",
      "exception": false,
-     "start_time": "2025-02-14T09:14:32.662955",
+     "start_time": "2025-02-14T12:54:44.953679",
      "status": "completed"
     },
     "tags": []
@@ -736,19 +736,19 @@
   {
    "cell_type": "code",
    "execution_count": 20,
-   "id": "741d84db",
+   "id": "c56faefb",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:14:36.627036Z",
-     "iopub.status.busy": "2025-02-14T09:14:36.626593Z",
-     "iopub.status.idle": "2025-02-14T09:14:36.636052Z",
-     "shell.execute_reply": "2025-02-14T09:14:36.634741Z"
+     "iopub.execute_input": "2025-02-14T12:54:48.786588Z",
+     "iopub.status.busy": "2025-02-14T12:54:48.785529Z",
+     "iopub.status.idle": "2025-02-14T12:54:48.795105Z",
+     "shell.execute_reply": "2025-02-14T12:54:48.793932Z"
     },
     "papermill": {
-     "duration": 0.023019,
-     "end_time": "2025-02-14T09:14:36.638610",
+     "duration": 0.021212,
+     "end_time": "2025-02-14T12:54:48.797528",
      "exception": false,
-     "start_time": "2025-02-14T09:14:36.615591",
+     "start_time": "2025-02-14T12:54:48.776316",
      "status": "completed"
     },
     "tags": []
@@ -766,23 +766,23 @@
        "       'log_total_orders', 'log_total_orders_2', 'log_total_orders_3',\n",
        "       'log_total_orders_4', 'log_total_orders_5', 'log_total_orders_discount',\n",
        "       'log_sell_price_main', 'log_sell_price_2', 'log_sell_price_3',\n",
-       "       'type_0_discount_2', 'type_0_discount_3', 'type_0_discount_4',\n",
-       "       'type_0_discount_5', 'discount_interaction', 'day_of_week', 'month',\n",
-       "       'Day_of_Month', 'Week_of_Year', 'Date_Weekday', 'Date_Dayofyear',\n",
-       "       'category', 'product_sales_7', 'product_sales_14', 'product_sales_16',\n",
+       "       'log_sell_price_4', 'type_0_discount_2', 'type_0_discount_3',\n",
+       "       'type_0_discount_4', 'type_0_discount_5', 'discount_interaction',\n",
+       "       'day_of_week', 'month', 'Day_of_Month', 'Week_of_Year', 'Date_Weekday',\n",
+       "       'Date_Dayofyear', 'category', 'product_sales_14', 'product_sales_16',\n",
        "       'product_sales_18', 'product_sales_21', 'product_sales_30',\n",
        "       'product_sales_60', 'product_sales_90', 'product_sales_120',\n",
        "       'product_sales_180', 'product_sales_270', 'product_sales_350',\n",
-       "       'product_sales_600', 'product_sales_1000', 'rolling_mean_7',\n",
-       "       'rolling_std_7', 'rolling_mean_14', 'rolling_std_14', 'rolling_mean_16',\n",
-       "       'rolling_std_16', 'rolling_mean_18', 'rolling_std_18',\n",
-       "       'rolling_mean_21', 'rolling_std_21', 'rolling_mean_30',\n",
-       "       'rolling_std_30', 'rolling_mean_60', 'rolling_std_60',\n",
-       "       'rolling_mean_90', 'rolling_std_90', 'rolling_mean_120',\n",
-       "       'rolling_std_120', 'rolling_mean_180', 'rolling_std_180',\n",
-       "       'rolling_mean_270', 'rolling_std_270', 'rolling_mean_350',\n",
-       "       'rolling_std_350', 'rolling_mean_600', 'rolling_std_600',\n",
-       "       'rolling_mean_1000', 'rolling_std_1000'],\n",
+       "       'product_sales_600', 'product_sales_1000', 'rolling_mean_14',\n",
+       "       'rolling_std_14', 'rolling_mean_16', 'rolling_std_16',\n",
+       "       'rolling_mean_18', 'rolling_std_18', 'rolling_mean_21',\n",
+       "       'rolling_std_21', 'rolling_mean_30', 'rolling_std_30',\n",
+       "       'rolling_mean_60', 'rolling_std_60', 'rolling_mean_90',\n",
+       "       'rolling_std_90', 'rolling_mean_120', 'rolling_std_120',\n",
+       "       'rolling_mean_180', 'rolling_std_180', 'rolling_mean_270',\n",
+       "       'rolling_std_270', 'rolling_mean_350', 'rolling_std_350',\n",
+       "       'rolling_mean_600', 'rolling_std_600', 'rolling_mean_1000',\n",
+       "       'rolling_std_1000'],\n",
        "      dtype='object')"
       ]
      },
@@ -798,25 +798,25 @@
   {
    "cell_type": "code",
    "execution_count": 21,
-   "id": "fd0478bf",
+   "id": "fd806954",
    "metadata": {
     "_cell_guid": "e13058e9-d860-4b11-af99-80b2c55baf97",
     "_uuid": "1fb3ac36-d01c-4e85-b288-77593d3cb567",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:14:36.656199Z",
-     "iopub.status.busy": "2025-02-14T09:14:36.655774Z",
-     "iopub.status.idle": "2025-02-14T09:14:37.449546Z",
-     "shell.execute_reply": "2025-02-14T09:14:37.448297Z"
+     "iopub.execute_input": "2025-02-14T12:54:48.815228Z",
+     "iopub.status.busy": "2025-02-14T12:54:48.814761Z",
+     "iopub.status.idle": "2025-02-14T12:54:49.575067Z",
+     "shell.execute_reply": "2025-02-14T12:54:49.573704Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.8057,
-     "end_time": "2025-02-14T09:14:37.452151",
+     "duration": 0.772278,
+     "end_time": "2025-02-14T12:54:49.578117",
      "exception": false,
-     "start_time": "2025-02-14T09:14:36.646451",
+     "start_time": "2025-02-14T12:54:48.805839",
      "status": "completed"
     },
     "tags": []
@@ -824,29 +824,29 @@
    "outputs": [],
    "source": [
     "# Prepare data for LightGBM\n",
-    "features = [ 'warehouse', 'total_orders',\n",
+    "features = ['unique_id', 'warehouse', 'total_orders',\n",
     "       'sell_price_main', 'type_0_discount',\n",
     "       'type_2_discount', 'name', 'price_discount_interaction',\n",
     "       'log_total_orders', 'log_total_orders_2', 'log_total_orders_3',\n",
     "       'log_total_orders_4', 'log_total_orders_5', 'log_total_orders_discount',\n",
     "       'log_sell_price_main', 'log_sell_price_2', 'log_sell_price_3',\n",
-    "       'type_0_discount_2', 'type_0_discount_3', 'type_0_discount_4',\n",
-    "       'type_0_discount_5', 'discount_interaction', 'day_of_week', 'month',\n",
-    "       'Day_of_Month', 'Week_of_Year', 'Date_Weekday', 'Date_Dayofyear',\n",
-    "       'category', 'product_sales_7', 'product_sales_14', 'product_sales_16',\n",
+    "       'log_sell_price_4', 'type_0_discount_2', 'type_0_discount_3',\n",
+    "       'type_0_discount_4', 'type_0_discount_5', 'discount_interaction',\n",
+    "       'day_of_week', 'month', 'Day_of_Month', 'Week_of_Year', 'Date_Weekday',\n",
+    "       'Date_Dayofyear', 'category', 'product_sales_14', 'product_sales_16',\n",
     "       'product_sales_18', 'product_sales_21', 'product_sales_30',\n",
     "       'product_sales_60', 'product_sales_90', 'product_sales_120',\n",
     "       'product_sales_180', 'product_sales_270', 'product_sales_350',\n",
-    "       'product_sales_600', 'product_sales_1000', 'rolling_mean_7',\n",
-    "       'rolling_std_7', 'rolling_mean_14', 'rolling_std_14', 'rolling_mean_16',\n",
-    "       'rolling_std_16', 'rolling_mean_18', 'rolling_std_18',\n",
-    "       'rolling_mean_21', 'rolling_std_21', 'rolling_mean_30',\n",
-    "       'rolling_std_30', 'rolling_mean_60', 'rolling_std_60',\n",
-    "       'rolling_mean_90', 'rolling_std_90', 'rolling_mean_120',\n",
-    "       'rolling_std_120', 'rolling_mean_180', 'rolling_std_180',\n",
-    "       'rolling_mean_270', 'rolling_std_270', 'rolling_mean_350',\n",
-    "       'rolling_std_350', 'rolling_mean_600', 'rolling_std_600',\n",
-    "       'rolling_mean_1000', 'rolling_std_1000']\n",
+    "       'product_sales_600', 'product_sales_1000', 'rolling_mean_14',\n",
+    "       'rolling_std_14', 'rolling_mean_16', 'rolling_std_16',\n",
+    "       'rolling_mean_18', 'rolling_std_18', 'rolling_mean_21',\n",
+    "       'rolling_std_21', 'rolling_mean_30', 'rolling_std_30',\n",
+    "       'rolling_mean_60', 'rolling_std_60', 'rolling_mean_90',\n",
+    "       'rolling_std_90', 'rolling_mean_120', 'rolling_std_120',\n",
+    "       'rolling_mean_180', 'rolling_std_180', 'rolling_mean_270',\n",
+    "       'rolling_std_270', 'rolling_mean_350', 'rolling_std_350',\n",
+    "       'rolling_mean_600', 'rolling_std_600', 'rolling_mean_1000',\n",
+    "       'rolling_std_1000']\n",
     "X = train[features]\n",
     "y = train['sales']"
    ]
@@ -854,25 +854,25 @@
   {
    "cell_type": "code",
    "execution_count": 22,
-   "id": "b390d53c",
+   "id": "eac4aabb",
    "metadata": {
     "_cell_guid": "1781b6e6-cbba-4719-ad96-0cb145912754",
     "_uuid": "3580bc81-c41f-42ac-879e-360c2dddc5fe",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:14:37.469346Z",
-     "iopub.status.busy": "2025-02-14T09:14:37.468942Z",
-     "iopub.status.idle": "2025-02-14T09:14:41.493624Z",
-     "shell.execute_reply": "2025-02-14T09:14:41.492369Z"
+     "iopub.execute_input": "2025-02-14T12:54:49.597361Z",
+     "iopub.status.busy": "2025-02-14T12:54:49.595921Z",
+     "iopub.status.idle": "2025-02-14T12:54:53.553555Z",
+     "shell.execute_reply": "2025-02-14T12:54:53.552221Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 4.036354,
-     "end_time": "2025-02-14T09:14:41.496183",
+     "duration": 3.969777,
+     "end_time": "2025-02-14T12:54:53.556587",
      "exception": false,
-     "start_time": "2025-02-14T09:14:37.459829",
+     "start_time": "2025-02-14T12:54:49.586810",
      "status": "completed"
     },
     "tags": []
@@ -894,25 +894,25 @@
   {
    "cell_type": "code",
    "execution_count": 23,
-   "id": "5a0f4db4",
+   "id": "d106760a",
    "metadata": {
     "_cell_guid": "230fbff2-b1ad-4fc9-9619-d0094c4d2011",
     "_uuid": "aca4e77e-444e-41df-9454-d2beb6f5a084",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:14:41.514545Z",
-     "iopub.status.busy": "2025-02-14T09:14:41.514166Z",
-     "iopub.status.idle": "2025-02-14T09:27:42.145589Z",
-     "shell.execute_reply": "2025-02-14T09:27:42.143728Z"
+     "iopub.execute_input": "2025-02-14T12:54:53.574509Z",
+     "iopub.status.busy": "2025-02-14T12:54:53.574082Z",
+     "iopub.status.idle": "2025-02-14T13:09:10.480033Z",
+     "shell.execute_reply": "2025-02-14T13:09:10.478673Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 780.643939,
-     "end_time": "2025-02-14T09:27:42.148634",
+     "duration": 856.917884,
+     "end_time": "2025-02-14T13:09:10.482460",
      "exception": false,
-     "start_time": "2025-02-14T09:14:41.504695",
+     "start_time": "2025-02-14T12:54:53.564576",
      "status": "completed"
     },
     "tags": []
@@ -930,467 +930,14 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "[LightGBM] [Warning] num_iterations is set=2500, num_boost_round=2500 will be ignored. Current value: num_iterations=2500\n",
+      "[LightGBM] [Warning] num_iterations is set=3000, num_boost_round=3000 will be ignored. Current value: num_iterations=3000\n",
       "[LightGBM] [Warning] Categorical features with more bins than the configured maximum bin number found.\n",
       "[LightGBM] [Warning] For categorical features, max_bin and max_bin_by_feature may be ignored with a large number of categories.\n",
-      "[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 1.495222 seconds.\n",
+      "[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 1.499810 seconds.\n",
       "You can set `force_col_wise=true` to remove the overhead.\n",
-      "[LightGBM] [Info] Total Bins 17272\n",
-      "[LightGBM] [Info] Number of data points in the train set: 3005565, number of used features: 70\n",
+      "[LightGBM] [Info] Total Bins 17017\n",
+      "[LightGBM] [Info] Number of data points in the train set: 3005565, number of used features: 69\n",
       "[LightGBM] [Info] Start training from score 112.953860\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
-      "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
       "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
       "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
       "[LightGBM] [Warning] No further splits with positive gain, best gain: -inf\n",
@@ -1403,18 +950,18 @@
     {
      "data": {
       "text/html": [
-       "<style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: \"▸\";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: \"▾\";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: \"\";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: \"\";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: \"\";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id=\"sk-container-id-1\" class=\"sk-top-container\"><div class=\"sk-text-repr-fallback\"><pre>LGBMRegressor(colsample_bytree=0.8528497905459008, learning_rate=0.05,\n",
-       "              max_depth=8, metric=&#x27;mae&#x27;, min_child_samples=25,\n",
-       "              num_boost_round=2500, num_leaves=100, objective=&#x27;regression&#x27;,\n",
-       "              reg_alpha=0.01, reg_lambda=0.1, subsample=0.7057135664023435)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class=\"sk-container\" hidden><div class=\"sk-item\"><div class=\"sk-estimator sk-toggleable\"><input class=\"sk-toggleable__control sk-hidden--visually\" id=\"sk-estimator-id-1\" type=\"checkbox\" checked><label for=\"sk-estimator-id-1\" class=\"sk-toggleable__label sk-toggleable__label-arrow\">LGBMRegressor</label><div class=\"sk-toggleable__content\"><pre>LGBMRegressor(colsample_bytree=0.8528497905459008, learning_rate=0.05,\n",
-       "              max_depth=8, metric=&#x27;mae&#x27;, min_child_samples=25,\n",
-       "              num_boost_round=2500, num_leaves=100, objective=&#x27;regression&#x27;,\n",
+       "<style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: \"▸\";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: \"▾\";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: \"\";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: \"\";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: \"\";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id=\"sk-container-id-1\" class=\"sk-top-container\"><div class=\"sk-text-repr-fallback\"><pre>LGBMRegressor(colsample_bytree=0.8528497905459008, learning_rate=0.04,\n",
+       "              max_depth=10, metric=&#x27;mae&#x27;, min_child_samples=25,\n",
+       "              num_boost_round=3000, num_leaves=80, objective=&#x27;regression&#x27;,\n",
+       "              reg_alpha=0.01, reg_lambda=0.1, subsample=0.7057135664023435)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class=\"sk-container\" hidden><div class=\"sk-item\"><div class=\"sk-estimator sk-toggleable\"><input class=\"sk-toggleable__control sk-hidden--visually\" id=\"sk-estimator-id-1\" type=\"checkbox\" checked><label for=\"sk-estimator-id-1\" class=\"sk-toggleable__label sk-toggleable__label-arrow\">LGBMRegressor</label><div class=\"sk-toggleable__content\"><pre>LGBMRegressor(colsample_bytree=0.8528497905459008, learning_rate=0.04,\n",
+       "              max_depth=10, metric=&#x27;mae&#x27;, min_child_samples=25,\n",
+       "              num_boost_round=3000, num_leaves=80, objective=&#x27;regression&#x27;,\n",
        "              reg_alpha=0.01, reg_lambda=0.1, subsample=0.7057135664023435)</pre></div></div></div></div></div>"
       ],
       "text/plain": [
-       "LGBMRegressor(colsample_bytree=0.8528497905459008, learning_rate=0.05,\n",
-       "              max_depth=8, metric='mae', min_child_samples=25,\n",
-       "              num_boost_round=2500, num_leaves=100, objective='regression',\n",
+       "LGBMRegressor(colsample_bytree=0.8528497905459008, learning_rate=0.04,\n",
+       "              max_depth=10, metric='mae', min_child_samples=25,\n",
+       "              num_boost_round=3000, num_leaves=80, objective='regression',\n",
        "              reg_alpha=0.01, reg_lambda=0.1, subsample=0.7057135664023435)"
       ]
      },
@@ -1425,15 +972,15 @@
    ],
    "source": [
     "params={ \n",
-    "    'learning_rate': 0.05,\n",
-    "    'num_leaves': 100,\n",
-    "    'max_depth': 8,\n",
+    "    'learning_rate': 0.04,\n",
+    "    'num_leaves': 80,\n",
+    "    'max_depth': 10,\n",
     "    'min_child_samples': 25,\n",
     "    'subsample': 0.7057135664023435,\n",
     "    'colsample_bytree': 0.8528497905459008,\n",
     "    'reg_alpha': 0.01,\n",
     "    'reg_lambda': 0.1,\n",
-    "    'num_boost_round': 2500,\n",
+    "    'num_boost_round': 3000,\n",
     "    'objective': 'regression',\n",
     "    'metric': 'mae',\n",
     "    'boosting_type': 'gbdt',\n",
@@ -1447,25 +994,25 @@
   {
    "cell_type": "code",
    "execution_count": 24,
-   "id": "90836f92",
+   "id": "81383d7a",
    "metadata": {
     "_cell_guid": "f5b0ea89-9822-4147-b93d-b81c04ab5db2",
     "_uuid": "f1db96f0-8f97-4622-afb1-6c4b5eb8d5e6",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T09:27:42.217445Z",
-     "iopub.status.busy": "2025-02-14T09:27:42.216956Z",
-     "iopub.status.idle": "2025-02-14T10:00:48.751318Z",
-     "shell.execute_reply": "2025-02-14T10:00:48.749789Z"
+     "iopub.execute_input": "2025-02-14T13:09:10.501677Z",
+     "iopub.status.busy": "2025-02-14T13:09:10.501292Z",
+     "iopub.status.idle": "2025-02-14T13:40:44.091758Z",
+     "shell.execute_reply": "2025-02-14T13:40:44.090106Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 1986.604877,
-     "end_time": "2025-02-14T10:00:48.786422",
+     "duration": 1893.610522,
+     "end_time": "2025-02-14T13:40:44.101590",
      "exception": false,
-     "start_time": "2025-02-14T09:27:42.181545",
+     "start_time": "2025-02-14T13:09:10.491068",
      "status": "completed"
     },
     "tags": []
@@ -1475,8 +1022,8 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Training WMAE: 15.638952890406856\n",
-      "Validation WMAE: 25.1078466002516\n"
+      "Training WMAE: 16.005985796074565\n",
+      "Validation WMAE: 24.88289180454423\n"
      ]
     }
    ],
@@ -1495,25 +1042,25 @@
   {
    "cell_type": "code",
    "execution_count": 25,
-   "id": "a23e635e",
+   "id": "a5a71f9d",
    "metadata": {
     "_cell_guid": "eeec1f20-b060-4523-bad1-525118f7058c",
     "_uuid": "aac8ba8b-e803-4f77-bf01-feee6b55c174",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T10:00:48.852989Z",
-     "iopub.status.busy": "2025-02-14T10:00:48.852575Z",
-     "iopub.status.idle": "2025-02-14T10:00:48.908102Z",
-     "shell.execute_reply": "2025-02-14T10:00:48.906926Z"
+     "iopub.execute_input": "2025-02-14T13:40:44.122499Z",
+     "iopub.status.busy": "2025-02-14T13:40:44.121875Z",
+     "iopub.status.idle": "2025-02-14T13:40:44.176678Z",
+     "shell.execute_reply": "2025-02-14T13:40:44.175302Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.092538,
-     "end_time": "2025-02-14T10:00:48.910766",
+     "duration": 0.069666,
+     "end_time": "2025-02-14T13:40:44.179907",
      "exception": false,
-     "start_time": "2025-02-14T10:00:48.818228",
+     "start_time": "2025-02-14T13:40:44.110241",
      "status": "completed"
     },
     "tags": []
@@ -1527,25 +1074,25 @@
   {
    "cell_type": "code",
    "execution_count": 26,
-   "id": "1f81be59",
+   "id": "afa5284d",
    "metadata": {
     "_cell_guid": "844723fd-9350-47b3-8687-9dabd14923eb",
     "_uuid": "359fa123-2b88-44cf-ab95-e55deec0a5a7",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T10:00:48.976395Z",
-     "iopub.status.busy": "2025-02-14T10:00:48.976018Z",
-     "iopub.status.idle": "2025-02-14T10:00:52.677249Z",
-     "shell.execute_reply": "2025-02-14T10:00:52.676289Z"
+     "iopub.execute_input": "2025-02-14T13:40:44.201250Z",
+     "iopub.status.busy": "2025-02-14T13:40:44.200759Z",
+     "iopub.status.idle": "2025-02-14T13:40:47.792586Z",
+     "shell.execute_reply": "2025-02-14T13:40:47.791330Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 3.737079,
-     "end_time": "2025-02-14T10:00:52.679755",
+     "duration": 3.606081,
+     "end_time": "2025-02-14T13:40:47.795181",
      "exception": false,
-     "start_time": "2025-02-14T10:00:48.942676",
+     "start_time": "2025-02-14T13:40:44.189100",
      "status": "completed"
     },
     "tags": []
@@ -1555,68 +1102,64 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "/tmp/ipykernel_17/879889964.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_mean = train.groupby(['warehouse', 'name'])[f'rolling_mean_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_std = train.groupby(['warehouse', 'name'])[f'rolling_std_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_mean = train.groupby(['warehouse', 'name'])[f'rolling_mean_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_std = train.groupby(['warehouse', 'name'])[f'rolling_std_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_mean = train.groupby(['warehouse', 'name'])[f'rolling_mean_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_std = train.groupby(['warehouse', 'name'])[f'rolling_std_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_mean = train.groupby(['warehouse', 'name'])[f'rolling_mean_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_std = train.groupby(['warehouse', 'name'])[f'rolling_std_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_mean = train.groupby(['warehouse', 'name'])[f'rolling_mean_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_std = train.groupby(['warehouse', 'name'])[f'rolling_std_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_mean = train.groupby(['warehouse', 'name'])[f'rolling_mean_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_std = train.groupby(['warehouse', 'name'])[f'rolling_std_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_mean = train.groupby(['warehouse', 'name'])[f'rolling_mean_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_std = train.groupby(['warehouse', 'name'])[f'rolling_std_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_mean = train.groupby(['warehouse', 'name'])[f'rolling_mean_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_std = train.groupby(['warehouse', 'name'])[f'rolling_std_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_mean = train.groupby(['warehouse', 'name'])[f'rolling_mean_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_std = train.groupby(['warehouse', 'name'])[f'rolling_std_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_mean = train.groupby(['warehouse', 'name'])[f'rolling_mean_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_std = train.groupby(['warehouse', 'name'])[f'rolling_std_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_mean = train.groupby(['warehouse', 'name'])[f'rolling_mean_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_std = train.groupby(['warehouse', 'name'])[f'rolling_std_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_mean = train.groupby(['warehouse', 'name'])[f'rolling_mean_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_std = train.groupby(['warehouse', 'name'])[f'rolling_std_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_mean = train.groupby(['warehouse', 'name'])[f'rolling_mean_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
-      "  last_rolling_std = train.groupby(['warehouse', 'name'])[f'rolling_std_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
-      "  last_rolling_mean = train.groupby(['warehouse', 'name'])[f'rolling_mean_{window}'].last().reset_index()\n",
-      "/tmp/ipykernel_17/879889964.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
+      "/tmp/ipykernel_17/542831258.py:4: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_rolling_std = train.groupby(['warehouse', 'name'])[f'rolling_std_{window}'].last().reset_index()\n"
      ]
     }
    ],
    "source": [
     "# Approximate rolling features for test using the last known values from train\n",
-    "for window in [7, 14, 16, 18, 21, 30, 60, 90, 120, 180, 270, 350, 600, 1000]:\n",
+    "for window in [14, 16, 18, 21, 30, 60, 90, 120, 180, 270, 350, 600, 1000]:\n",
     "    last_rolling_mean = train.groupby(['warehouse', 'name'])[f'rolling_mean_{window}'].last().reset_index()\n",
     "    last_rolling_std = train.groupby(['warehouse', 'name'])[f'rolling_std_{window}'].last().reset_index()\n",
     "    \n",
@@ -1627,25 +1170,25 @@
   {
    "cell_type": "code",
    "execution_count": 27,
-   "id": "bd045a6e",
+   "id": "208152d6",
    "metadata": {
     "_cell_guid": "832d48bb-249f-4341-8d0e-b09b6c994d81",
     "_uuid": "d4b74623-946a-4c3f-be43-07b6f2ce69c1",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T10:00:52.747677Z",
-     "iopub.status.busy": "2025-02-14T10:00:52.746770Z",
-     "iopub.status.idle": "2025-02-14T10:00:54.662020Z",
-     "shell.execute_reply": "2025-02-14T10:00:54.660970Z"
+     "iopub.execute_input": "2025-02-14T13:40:47.816091Z",
+     "iopub.status.busy": "2025-02-14T13:40:47.815661Z",
+     "iopub.status.idle": "2025-02-14T13:40:49.592181Z",
+     "shell.execute_reply": "2025-02-14T13:40:49.591089Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 1.952034,
-     "end_time": "2025-02-14T10:00:54.664707",
+     "duration": 1.789665,
+     "end_time": "2025-02-14T13:40:49.594560",
      "exception": false,
-     "start_time": "2025-02-14T10:00:52.712673",
+     "start_time": "2025-02-14T13:40:47.804895",
      "status": "completed"
     },
     "tags": []
@@ -1655,8 +1198,6 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
-      "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
       "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
       "  last_lag_values = train.groupby(['warehouse', 'name'])[f'product_sales_{shift}'].last().reset_index()\n",
       "/tmp/ipykernel_17/3620135804.py:3: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.\n",
@@ -1697,25 +1238,25 @@
   {
    "cell_type": "code",
    "execution_count": 28,
-   "id": "74aad0f2",
+   "id": "5636b83a",
    "metadata": {
     "_cell_guid": "6f5110b5-9896-4a8f-b03c-d80b00266b39",
     "_uuid": "e05bd765-4ad7-47f2-86ae-802b1055a650",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T10:00:54.740881Z",
-     "iopub.status.busy": "2025-02-14T10:00:54.740519Z",
-     "iopub.status.idle": "2025-02-14T10:00:54.765903Z",
-     "shell.execute_reply": "2025-02-14T10:00:54.764669Z"
+     "iopub.execute_input": "2025-02-14T13:40:49.618567Z",
+     "iopub.status.busy": "2025-02-14T13:40:49.617682Z",
+     "iopub.status.idle": "2025-02-14T13:40:49.643216Z",
+     "shell.execute_reply": "2025-02-14T13:40:49.642006Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.064713,
-     "end_time": "2025-02-14T10:00:54.768455",
+     "duration": 0.040588,
+     "end_time": "2025-02-14T13:40:49.645550",
      "exception": false,
-     "start_time": "2025-02-14T10:00:54.703742",
+     "start_time": "2025-02-14T13:40:49.604962",
      "status": "completed"
     },
     "tags": []
@@ -1737,25 +1278,25 @@
   {
    "cell_type": "code",
    "execution_count": 29,
-   "id": "8583f601",
+   "id": "0aef46ed",
    "metadata": {
     "_cell_guid": "84150f9a-1232-4147-ae34-2a6e8d43e388",
     "_uuid": "8000d6c6-ea8f-4c64-8524-e5aaf6bfa4a4",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T10:00:54.839307Z",
-     "iopub.status.busy": "2025-02-14T10:00:54.838781Z",
-     "iopub.status.idle": "2025-02-14T10:00:54.861929Z",
-     "shell.execute_reply": "2025-02-14T10:00:54.860696Z"
+     "iopub.execute_input": "2025-02-14T13:40:49.667309Z",
+     "iopub.status.busy": "2025-02-14T13:40:49.666909Z",
+     "iopub.status.idle": "2025-02-14T13:40:49.689899Z",
+     "shell.execute_reply": "2025-02-14T13:40:49.688882Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.061586,
-     "end_time": "2025-02-14T10:00:54.864550",
+     "duration": 0.037052,
+     "end_time": "2025-02-14T13:40:49.692735",
      "exception": false,
-     "start_time": "2025-02-14T10:00:54.802964",
+     "start_time": "2025-02-14T13:40:49.655683",
      "status": "completed"
     },
     "tags": []
@@ -1779,25 +1320,25 @@
   {
    "cell_type": "code",
    "execution_count": 30,
-   "id": "edd126ab",
+   "id": "3802d88e",
    "metadata": {
     "_cell_guid": "a48feaf6-a9be-47cc-a843-560c428afd70",
     "_uuid": "ef25bdfe-de43-49d0-a2c2-b496ca9547f6",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T10:00:54.932628Z",
-     "iopub.status.busy": "2025-02-14T10:00:54.932202Z",
-     "iopub.status.idle": "2025-02-14T10:01:18.762784Z",
-     "shell.execute_reply": "2025-02-14T10:01:18.761531Z"
+     "iopub.execute_input": "2025-02-14T13:40:49.714471Z",
+     "iopub.status.busy": "2025-02-14T13:40:49.714100Z",
+     "iopub.status.idle": "2025-02-14T13:41:11.894254Z",
+     "shell.execute_reply": "2025-02-14T13:41:11.892721Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 23.86776,
-     "end_time": "2025-02-14T10:01:18.765719",
+     "duration": 22.194211,
+     "end_time": "2025-02-14T13:41:11.896978",
      "exception": false,
-     "start_time": "2025-02-14T10:00:54.897959",
+     "start_time": "2025-02-14T13:40:49.702767",
      "status": "completed"
     },
     "tags": []
@@ -1814,25 +1355,25 @@
   {
    "cell_type": "code",
    "execution_count": 31,
-   "id": "a4cf2a0e",
+   "id": "34dd74b3",
    "metadata": {
     "_cell_guid": "20507b4f-40fd-4719-84a8-a41edbe2a137",
     "_uuid": "3f409af1-1b33-41e4-a0d9-69a689ecbe7f",
     "collapsed": false,
     "execution": {
-     "iopub.execute_input": "2025-02-14T10:01:18.835208Z",
-     "iopub.status.busy": "2025-02-14T10:01:18.834742Z",
-     "iopub.status.idle": "2025-02-14T10:01:19.022159Z",
-     "shell.execute_reply": "2025-02-14T10:01:19.020979Z"
+     "iopub.execute_input": "2025-02-14T13:41:11.918727Z",
+     "iopub.status.busy": "2025-02-14T13:41:11.918352Z",
+     "iopub.status.idle": "2025-02-14T13:41:12.099473Z",
+     "shell.execute_reply": "2025-02-14T13:41:12.098202Z"
     },
     "jupyter": {
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.225583,
-     "end_time": "2025-02-14T10:01:19.024761",
+     "duration": 0.195759,
+     "end_time": "2025-02-14T13:41:12.102895",
      "exception": false,
-     "start_time": "2025-02-14T10:01:18.799178",
+     "start_time": "2025-02-14T13:41:11.907136",
      "status": "completed"
     },
     "tags": []
@@ -1851,7 +1392,7 @@
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "0334a711",
+   "id": "d61ecfe1",
    "metadata": {
     "_cell_guid": "80c275be-ac68-413a-a04f-65ac8f444730",
     "_uuid": "8e2c16e8-7ac4-49a4-8bf0-8b03e7ad3161",
@@ -1860,10 +1401,10 @@
      "outputs_hidden": false
     },
     "papermill": {
-     "duration": 0.035712,
-     "end_time": "2025-02-14T10:01:19.094639",
+     "duration": 0.009652,
+     "end_time": "2025-02-14T13:41:12.123138",
      "exception": false,
-     "start_time": "2025-02-14T10:01:19.058927",
+     "start_time": "2025-02-14T13:41:12.113486",
      "status": "completed"
     },
     "tags": []
@@ -1907,14 +1448,14 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 2948.670958,
-   "end_time": "2025-02-14T10:01:20.355992",
+   "duration": 2922.715978,
+   "end_time": "2025-02-14T13:41:13.157367",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2025-02-14T09:12:11.685034",
+   "start_time": "2025-02-14T12:52:30.441389",
    "version": "2.6.0"
   }
  },
